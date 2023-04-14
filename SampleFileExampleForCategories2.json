@@ -33,6 +33,7 @@
         "Oh Pshaw", "Preference", "Snip Snap Snorem", "Hold 'Em", "Page One",
         "Hollywood Eights", "Spar", "Page One", "Cincinnati Poker", "Agram",
         "Spoil", "Let it Ride Stud Poker", "Play or Pay"],
+
         "Board Games": ["the Game of Life", "Clue", "Candy Land", "Monopoly",
         "Scrabble", "Battleship", "Risk", "Stratego", "Axis & Allies", 
         "Backgammon", "Checkers", "Chinese Checkers", "Blockus", "Agricola",
@@ -45,31 +46,7 @@
         "Adult Board Games", "Trivial Pursuit", "Sequence", "Catan", "Domino",
         "Cribbage", "Card Against Humanity", "Azul"],
         "Video Games": []
-        },
-    "Animmals": {
-        "Invertebrates": [],
-        "Fish": [],
-        "Amphibians": [],
-        "Reptiles": [],
-        "Birds": [],
-        "Mammals": []
-        },
-    "Cartoons Shows by network": {
-        "Nickelodeon": [],
-        "Cartoon Network": [],
-        "Disney Channel": []
-    }
-    },
-    "Hard Mode":
-    {
-    "Types of transportation": {
-        "Mortocycles Models": [],
-        "Car Models": [],
-        "Truck Models": []
-    }
-    },
-    "IMPOSSIBLE": {
-        "Disease": []
+        }
     }
 }
 } 
