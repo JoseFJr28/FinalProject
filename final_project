@@ -1,0 +1,10 @@
+import time 
+
+def timer():
+    start_time = time.time()
+    response = time.time()
+    time_lasp = start_time - response
+    return time_lasp
+
+    
+    
