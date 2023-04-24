@@ -1,0 +1,700 @@
+id,name
+1,Aardvark
+2,Abyssinian
+3,Adelie Penguin
+4,Affenpinscher
+5,Afghan Hound
+6,African Bush Elephant
+7,African Civet
+8,African Clawed Frog
+9,African Forest Elephant
+10,African Palm Civet
+11,African Penguin
+12,African Tree Toad
+13,African Wild Dog
+14,Ainu Dog
+15,Airedale Terrier
+16,Akbash
+17,Akita
+18,Alaskan Malamute
+19,Albatross
+20,Aldabra Giant Tortoise
+21,Alligator
+22,Alpaca
+23,Alpine Dachsbracke
+24,Amazon River Dolphin (Pink Dolphin)
+25,American Alsatian
+26,American Bulldog
+27,American Cocker Spaniel
+28,American Coonhound
+29,American Eskimo Dog
+30,American Foxhound
+31,American Pit Bull Terrier
+32,American Staffordshire Terrier
+33,American Water Spaniel
+34,Amur Leopard
+35,Anatolian Shepherd Dog
+36,Anchovies
+37,Angelfish
+38,Ant
+39,Anteater
+40,Antelope
+41,Appenzeller Dog
+42,Arapaima
+43,Arctic Fox
+44,Arctic Hare
+45,Arctic Wolf
+46,Armadillo
+47,Asian Elephant
+48,Asian Giant Hornet
+49,Asian Palm Civet
+50,Asiatic Black Bear
+51,Aurochs
+52,Australian Cattle Dog
+53,Australian Kelpie Dog
+54,Australian Mist
+55,Australian Shepherd
+56,Australian Terrier
+57,Avocet
+58,Axolotl
+59,Aye Aye
+60,Baboon
+61,Bactrian Camel
+62,Badger
+63,Baiji
+64,Balinese
+65,Banded Palm Civet
+66,Bandicoot
+67,Barb
+68,Barn Owl
+69,Barnacle
+70,Barracuda
+71,Barramundi Fish
+72,Basenji Dog
+73,Basking Shark
+74,Basset Fauve de Bretagne
+75,Basset Hound
+76,Bat
+77,Bavarian Mountain Hound
+78,Beagle
+79,Bear
+80,Bearded Collie
+81,Bearded Dragon
+82,Beaver
+83,Bedlington Terrier
+84,Beetle
+85,Beluga Sturgeon
+86,Bengal Tiger
+87,Bernese Mountain Dog
+88,Bichir
+89,Bichon Frise
+90,Biewer Terrier
+91,Binturong
+92,Bird
+93,Birds Of Paradise
+94,Birman
+95,Bison
+96,Black Marlin
+97,Black Rhinoceros
+98,Black Russian Terrier
+99,Black Widow Spider
+100,Blobfish
+101,Bloodhound
+102,Blue Jay
+103,Blue Lacy Dog
+104,Blue Whale
+105,Bluetick Coonhound
+106,Bobcat
+107,Bolognese Dog
+108,Bombay
+109,Bongo
+110,Bonito Fish
+111,Bonobo
+112,Booby
+113,Border Collie
+114,Border Terrier
+115,Bornean Orang-utan
+116,Borneo Elephant
+117,Boston Terrier: Complete Pet Guide
+118,Bottlenose Dolphin
+119,Bowfin
+120,Bowhead Whale
+121,Boxer Dog
+122,Boykin Spaniel
+123,Brazilian Terrier
+124,British Timber
+125,Brown Bear
+126,Budgerigar
+127,Buffalo
+128,Bull Shark
+129,Bull Terrier
+130,Bulldog
+131,Bullfrog
+132,Bullmastiff
+133,Bumblebee
+134,Burmese
+135,Burrowing Frog
+136,Butterfly
+137,Butterfly Fish
+138,Caiman
+139,Caiman Lizard
+140,Cairn Terrier
+141,Camel
+142,Camel Spider
+143,Canaan Dog
+144,Canadian Eskimo Dog
+145,Capybara
+146,Caracal
+147,Carolina Dog
+148,Carp
+149,Cassowary
+150,Cat
+151,Caterpillar
+152,Catfish
+153,Cavalier King Charles Spaniel
+154,Centipede
+155,Cesky Fousek
+156,Chameleon
+157,Chamois
+158,Cheetah
+159,Chesapeake Bay Retriever
+160,Chicken
+161,Chihuahua
+162,Chimaera
+163,Chimpanzee
+164,Chinchilla
+165,Chinese Crested Dog
+166,Chinook
+167,Chinstrap Penguin
+168,Chipmunk
+169,Chow Chow
+170,Cichlid
+171,Clouded Leopard
+172,Clownfish
+173,Clumber Spaniel
+174,Coati
+175,Cockatoo
+176,Cockroach
+177,Coelacanth
+178,Collared Peccary
+179,Collie
+180,Colossal Squid
+181,Common Buzzard
+182,Common Frog
+183,Common Loon
+184,Common Toad
+185,Cooper’s Hawk
+186,Coral
+187,Cotton-top Tamarin
+188,Cougar
+189,Cow
+190,Coyote
+191,Crab
+192,Crab-Eating Macaque
+193,Crane
+194,Crested Penguin
+195,Crocodile
+196,Cross River Gorilla
+197,Curly Coated Retriever
+198,Cuscus
+199,Cuttlefish
+200,Dachshund
+201,Dalmatian
+202,Darwin’s Frog
+203,Deer
+204,Desert Tortoise
+205,Deutsche Bracke
+206,Dhole
+207,Dingo
+208,Discus
+209,Doberman Pinscher
+210,Dodo
+211,Dog
+212,Dogo Argentino
+213,Dogue De Bordeaux
+214,Dolphin
+215,Donkey
+216,Dormouse
+217,Dragonfish
+218,Dragonfly
+219,Drever
+220,Drum Fish
+221,Duck
+222,Dugong
+223,Dunker
+224,Dusky Dolphin
+225,Dwarf Crocodile
+226,Eagle
+227,Earwig
+228,Eastern Gorilla
+229,Eastern Lowland Gorilla
+230,Echidna
+231,Edible Frog
+232,Eel
+233,Egyptian Mau
+234,Electric Eel
+235,Elephant
+236,Elephant Seal
+237,Elephant Shrew
+238,Emperor Penguin
+239,Emperor Tamarin
+240,Emu
+241,English Cocker Spaniel
+242,English Shepherd
+243,English Springer Spaniel
+244,Entlebucher Mountain Dog
+245,Epagneul Pont Audemer
+246,Ermine
+247,Eskimo Dog
+248,Estrela Mountain Dog
+249,Falcon
+250,False Killer Whale
+251,Fangtooth
+252,Fennec Fox
+253,Ferret
+254,Field Spaniel
+255,Fin Whale
+256,Finnish Spitz
+257,Fire-Bellied Toad
+258,Fish
+259,Fishing Cat
+260,Flamingo
+261,Flat Coat Retriever
+262,Flounder
+263,Fluke Fish (summer flounder)
+264,Fly
+265,Flying Squirrel
+266,Fossa
+267,Fox
+268,Fox Terrier
+269,French Bulldog
+270,Frigatebird
+271,Frilled Lizard
+272,Frilled Shark
+273,Frog
+274,Fur Seal
+275,Galapagos Penguin
+276,Galapagos Tortoise
+277,Gar
+278,Gecko
+279,Gentoo Penguin
+280,Geoffroys Tamarin
+281,Gerbil
+282,German Pinscher
+283,German Shepherd Guide
+284,Gharial
+285,Giant African Land Snail
+286,Giant Clam
+287,Giant Panda Bear
+288,Giant Schnauzer
+289,Gibbon
+290,Gila Monster
+291,Giraffe
+292,Glass Lizard
+293,Glow Worm
+294,Goat
+295,Goblin Shark
+296,Golden Lion Tamarin
+297,Golden Masked Owl
+298,Golden Oriole
+299,Golden Retriever Complete Pet Guide
+300,Golden-Crowned Flying Fox
+301,Goose
+302,Gopher
+303,Gorilla
+304,Grasshopper
+305,Great Dane
+306,Great Pyrenees
+307,Great White Shark
+308,Greater Swiss Mountain Dog
+309,Green Anole
+310,Green Bee-Eater
+311,Greenland Dog
+312,Grey Mouse Lemur
+313,Grey Reef Shark
+314,Grey Seal
+315,Greyhound
+316,Grizzly Bear
+317,Grouse
+318,Guinea Fowl
+319,Guinea Pig
+320,Guppy
+321,Hagfish
+322,Hammerhead Shark
+323,Hamster
+324,Hare
+325,Harpy Eagle
+326,Harrier
+327,Havanese
+328,Hawaiian Crow
+329,Hedgehog
+330,Hercules Beetle
+331,Hermit Crab
+332,Heron
+333,Herring
+334,Highland Cattle
+335,Himalayan
+336,Hippopotamus
+337,Honey Badger
+338,Honey Bee
+339,Hoopoe
+340,Horn Shark
+341,Hornbill
+342,Horned Frog
+343,Horse
+344,Horseshoe Crab
+345,Howler Monkey
+346,Human
+347,Humboldt Penguin
+348,Hummingbird
+349,Humpback Whale
+350,Hyena
+351,Ibis
+352,Ibizan Hound
+353,Iguana
+354,Immortal Jellyfish
+355,Impala
+356,Indian Elephant
+357,Indian Palm Squirrel
+358,Indian Rhinoceros
+359,Indian Star Tortoise
+360,Indochinese Tiger
+361,Indri
+362,Insects
+363,Irish Setter Complete Pet Guide
+364,Irish WolfHound
+365,Italian Greyhound
+366,Jack Russel
+367,Jackal
+368,Jaguar
+369,Japanese Chin
+370,Japanese Macaque
+371,Javan Rhinoceros
+372,Javanese
+373,Jellyfish
+374,Jerboa
+375,Kakapo
+376,Kangaroo
+377,Keel-Billed Toucan
+378,Keeshond
+379,Killer Whale
+380,King Cobra
+381,King Crab
+382,King Penguin
+383,Kingfisher
+384,Kiwi
+385,Koala
+386,Komodo Dragon
+387,Krill
+388,Kudu
+389,Labradoodle
+390,Labrador Retriever
+391,Ladybug
+392,Lamprey
+393,Leaf-Tailed Gecko
+394,Lemming
+395,Lemur
+396,Leopard
+397,Leopard Cat
+398,Leopard Seal
+399,Leopard Tortoise
+400,Liger
+401,Lion
+402,Lionfish
+403,Little Penguin
+404,Lizard
+405,Llama
+406,Lobster
+407,Long-Eared Owl
+408,Lungfish
+409,Lynx
+410,Macaroni Penguin
+411,Macaw
+412,Magellanic Penguin
+413,Magpie
+414,Maine Coon
+415,Malayan Civet
+416,Malayan Tiger
+417,Maltese
+418,Mammals
+419,Manatee
+420,Mandrill
+421,Maned Wolf
+422,Manta Ray
+423,Marine Toad
+424,Markhor
+425,Marmot
+426,Marsh Frog
+427,Masked Palm Civet
+428,Mastiff
+429,Mayfly
+430,Meerkat
+431,Megalodon
+432,Mexican Free-Tailed Bat
+433,Milkfish
+434,Millipede
+435,Mink
+436,Minke Whale
+437,Mole
+438,Molly
+439,Monarch Butterfly
+440,Mongoose
+441,Mongrel
+442,Monitor Lizard
+443,Monkey
+444,Monkfish
+445,Monte Iberia Eleuth
+446,Moorhen
+447,Moose
+448,Moray Eel
+449,Moth
+450,Mountain Gorilla
+451,Mountain Lion
+452,Mouse
+453,Mule
+454,Muskrat
+455,Narwhal
+456,Neanderthal
+457,Neapolitan Mastiff
+458,Newfoundland
+459,Newt
+460,Nightingale
+461,Norfolk Terrier
+462,North American Black Bear
+463,Northern Inuit Dog
+464,Norwegian Forest
+465,Numbat
+466,Nurse Shark
+467,Ocelot
+468,Octopus
+469,Okapi
+470,Old English Sheepdog
+471,Olm
+472,Opossum
+473,Orang-utan
+474,Ostrich
+475,Otter
+476,Oyster
+477,Paddlefish
+478,Pademelon
+479,Pangolin
+480,Panther
+481,Parrot
+482,Patas Monkey
+483,Peacock
+484,Pekingese
+485,Pelican
+486,Penguin
+487,Pere Davids Deer
+488,Peregrine Falcon
+489,Persian
+490,Petit Basset Griffon Vendéen
+491,Pheasant
+492,Pied Tamarin
+493,Pig
+494,Pika
+495,Pike Fish
+496,Pink Fairy Armadillo
+497,Piranha
+498,Platypus
+499,Pointer
+500,Poison Dart Frog
+501,Polar Bear
+502,Pond Skater
+503,Poodle
+504,Pool Frog
+505,Porcupine
+506,Porpoise
+507,Possum
+508,Prawn
+509,Proboscis Monkey
+510,Pufferfish
+511,Puffin
+512,Pug
+513,Puma
+514,Purple Emperor Butterfly
+515,Puss Moth
+516,Pygmy Hippopotamus
+517,Pygmy Marmoset
+518,Quail
+519,Quetzal
+520,Quokka
+521,Quoll
+522,Rabbit
+523,Raccoon
+524,Raccoon Dog
+525,Radiated Tortoise
+526,Ragdoll
+527,Rat
+528,Rattlesnake
+529,Red Finch
+530,Red Fox
+531,Red Knee Tarantula
+532,Red Panda
+533,Red Wolf
+534,Red-handed Tamarin
+535,Reindeer
+536,Rhinoceros
+537,River Turtle
+538,Robin
+539,Rock Hyrax
+540,Rockfish
+541,Rockhopper Penguin
+542,Roseate Spoonbill
+543,Rottweiler
+544,Royal Penguin
+545,Russian Blue
+546,Saarloos Wolfdog
+547,Saber-Toothed Tiger
+548,Sable
+549,Saiga
+550,Saint Bernard
+551,Salamander
+552,Salmon
+553,Samoyed
+554,Sand Lizard
+555,Saola
+556,Sardines
+557,Sawfish
+558,Scimitar-horned Oryx
+559,Scorpion
+560,Scorpion Fish
+561,Sea Dragon
+562,Sea Lion
+563,Sea Otter
+564,Sea Slug
+565,Sea Squirt
+566,Sea Turtle
+567,Sea Urchin
+568,Seahorse
+569,Seal
+570,Serval
+571,Shark
+572,Sheep
+573,Shiba Inu
+574,Shih Tzu
+575,Shrimp
+576,Siamese
+577,Siamese Fighting Fish
+578,Siberian
+579,Siberian Husky
+580,Siberian Tiger
+581,Silver Dollar
+582,Skate Fish
+583,Skunk
+584,Sloth
+585,Slow Worm
+586,Snail
+587,Snake
+588,Snapping Turtle
+589,Snowshoe
+590,Snowy Owl
+591,Somali
+592,South China Tiger
+593,Spadefoot Toad
+594,Sparrow
+595,Spectacled Bear
+596,Sperm Whale
+597,Spider Monkey
+598,Spiny Dogfish
+599,Spixs Macaw
+600,Sponge
+601,Squid
+602,Squirrel
+603,Squirrel Monkey
+604,Sri Lankan Elephant
+605,Staffordshire Bull Terrier
+606,Stag Beetle
+607,Starfish
+608,Steller’s Sea Cow
+609,Stick Insect
+610,Stingray
+611,Stoat
+612,Striped Rocket Frog
+613,Sturgeon
+614,Sucker Fish
+615,Sugar Glider
+616,Sumatran Elephant
+617,Sumatran Orang-utan
+618,Sumatran Rhinoceros
+619,Sumatran Tiger
+620,Sun Bear
+621,Swai Fish
+622,Swan
+623,Swedish Vallhund
+624,Tamaskan
+625,Tang
+626,Tapanuli Orang-utan
+627,Tapir
+628,Tarpon
+629,Tarsier
+630,Tasmanian Devil
+631,Tawny Owl
+632,Teddy Roosevelt Terrier
+633,Termite
+634,Tetra
+635,Thorny Devil
+636,Tibetan Mastiff
+637,Tiffany
+638,Tiger
+639,Tiger Salamander
+640,Tiger Shark
+641,Tortoise
+642,Toucan
+643,Tree Frog
+644,Tropicbird
+645,Tuatara
+646,Turkey
+647,Turkish Angora
+648,Uakari
+649,Uguisu
+650,Umbrellabird
+651,Utonagan
+652,Vampire Bat
+653,Vampire Squid
+654,Vaquita
+655,Vervet Monkey
+656,Vulture
+657,Wallaby
+658,Walleye Fish
+659,Walrus
+660,Wandering Albatross
+661,Warthog
+662,Wasp
+663,Water Buffalo
+664,Water Dragon
+665,Water Vole
+666,Weasel
+667,Welsh Corgi: The Complete Pet Guide
+668,West Highland Terrier
+669,Western Gorilla
+670,Western Lowland Gorilla
+671,Whale Shark
+672,Whippet
+673,White Rhinoceros
+674,White Tiger
+675,White-Faced Capuchin
+676,Wild Boar
+677,Wildebeest
+678,Wolf
+679,Wolf Eel
+680,Wolf Spider
+681,Wolffish
+682,Wolverine
+683,Wombat
+684,Woodlouse
+685,Woodpecker
+686,Woolly Mammoth
+687,Woolly Monkey
+688,Wrasse
+689,Wyoming Toad
+690,X-Ray Tetra
+691,Xerus
+692,Yak
+693,Yellow-Eyed Penguin
+694,Yorkshire Terrier
+695,Zebra
+696,Zebra Shark
+697,Zebu
+698,Zonkey
+699,Zorse
