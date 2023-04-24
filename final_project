@@ -5,6 +5,9 @@ def timer():
     response = time.time()
     time_lasp = start_time - response
     return time_lasp
-
+    if time_lasp > avg_time():
+        return f"You hestitated, {winner} wins"
+    else():
+        pass
     
     
