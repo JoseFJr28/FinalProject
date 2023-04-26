@@ -1,4 +1,5 @@
 import random
+import time 
 """
 The following is a game called Concentration. You are able to play by yourself
 or with the computer. The goal of the game is to name more object of the
@@ -26,6 +27,16 @@ class Concentration:
     'Adds player to the game'
     def add_players(self, player_dict):
         return player_dict[self.name]
+    
+    def timer():
+        start_time = time.time()
+        response = time.time()
+        time_lasp = start_time - response
+        return time_lasp
+        if time_lasp > avg_time():
+            return f"You hestitated, {winner} wins"
+        else():
+            pass
     
 
     
