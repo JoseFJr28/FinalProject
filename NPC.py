@@ -33,7 +33,7 @@ class NPC:
         """
         return f"Current mode for NPC {self.npc_name} is {self.mode}"
 
-    def handicap_npc(self, dict, brain):
+    def handicap_npc(self, brain, difficulty, dict):
         """
         Will give a handicap to the NPC on how "smart" it is;
         Args:
@@ -50,23 +50,45 @@ class NPC:
             else:
                 return brain = word_count
         """
-        pass
+        if difficulty.lower() == 'easy':
+            return brain == random.randrange(1,11)
+        elif difficulty.lower() == 'medium':
+            return brain == random.randrange(1,20)
+        elif difficulty.lower() == 'hard':
+            return brain == random.randrange(30,50)
+        elif difficulty.lower() == 'impossible':
+            return brain == dict
+        else:
+            return f"That mode is not available" 
+            
     
-    def npc_reader(self, filepath, difficulty, brain):
+    def npc_reader(self, filepath, brain, category):
         """
         Will read the file and from there will see what difficulty of the npc
         and return a list of the words the computer will know. The words will be
         chosen at random
+        
         Ars:
             file(filepath): the vocab file
-            difficulty(str): the mode of npc
             brain(int): amount of words the computer will remember
+            categorty(dict): This chosen category that will have the list of 
+            wordsi n that category
         Returns:
             A list of random words from the categories list of words
         """
-        pass
-
-        
+        with open(filepath, 'r', encoding='utf-8') as file:
+            
+            for x in category.values():
+                if len(self.head) != brain:
+                    self.head.append(x)
+                else:
+                    break
+                
+                    
+                    
+            
+            
+                
                     
     
     
