@@ -10,8 +10,8 @@ class Concentration:
     
     "This defines the game"
     def __init__(self, game, player_dict):
-        pass
-    
+        self.game = game
+        self.player_dict = player_dict
     
     """Decides which player/npc goes first, second, third, etc.
     It will be determined by choosing a number 1-10"""
