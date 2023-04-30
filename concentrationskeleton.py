@@ -36,7 +36,9 @@ class Concentration:
         return time_lasp
         if time_lasp > avg_time():
             return f"You hestitated, {winner} wins"
-        
+        elif():
+            time_lasp <= avg_time
+            continue
             
 
 def player_words():
