@@ -28,6 +28,7 @@ class Concentration:
     def add_players(self, player_dict):
         return player_dict[self.name]
     
+    
     def timer():
         start_time = time.time()
         response = time.time()
@@ -35,8 +36,9 @@ class Concentration:
         return time_lasp
         if time_lasp > avg_time():
             return f"You hestitated, {winner} wins"
-        else():
-            pass
-    
+        
+            
 
+def player_words():
+    pass
     
