@@ -1,9 +1,10 @@
 import random
 import time
-
+       
 class Training:
     def __init__(self, mode = ''):
         self.mode = mode
+        self.l_3_5 = []
     def mode():
         w_t = input("Would you like to practice with words or numbers (w or n)")
         if w_t == 'w':
@@ -56,7 +57,35 @@ class Training:
                 #if someone messes up the instructions, they're automatically signed up for a secret mode which is the hardest
                 mode = 'insane numbers'
         return mode
-    def training_exercise(mode, t=3):
+    def files():
+        with open("3-5.txt", "r") as f_3_5:
+            for words in f_3_5:
+                Training.l_3_5.append(words.split(", "))
+    def training_exercise(mode):
         keep = input("Would you like to start? Type y")
         count = 0
         wrong = 0
+        if mode == "nee":
+            print(f"You chose an easy mode regarding both the count of letters and the time!")
+            while keep != "n":
+                word = random.choice(Training.l_3_5)
+                print(f"Your word is {word}")
+                time.sleep(9)
+                print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
+                ans = input("What word did you see?")
+                if ans == word:
+                    print(f"Good job! You got it right!")
+                    keep = input("Would you like to keep going? y or n")
+                    count += 1
+                else:
+                    print(f"Nice try! The answer is {word}")
+                    wrong += 1
+                    keep = input("Would you like to keep going? y or n")
+            return f"Nice session. You've got {count} words right and {wrong} words wrong! Keep practicing your memory training!"
+        elif mode == "nee":
+            print(f"You chose an easy mode regarding both the count of numbers and the time!")
+            while keep != "n":
+                
+Training()
+        
+    

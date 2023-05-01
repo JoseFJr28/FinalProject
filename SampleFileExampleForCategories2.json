@@ -47,7 +47,13 @@
         "Cribbage", "Card Against Humanity", "Azul"],
         "Video Games": []
         }
+    }, 
+    "Hard Mode": {
+        "NBA Players": ["John Starks", "RJ Barrett", "Jimmy Butler", "LeBron James", "Michael Jordan", "Nikola Jokic",
+         "Joel Embiid", "Jayson Tatum", "Derrick White", ""]
     }
+    
+
 }
 } 
 
