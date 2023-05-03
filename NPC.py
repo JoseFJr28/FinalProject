@@ -30,7 +30,7 @@ class NPC:
         """
         This will print out hte NPC name and provide the current score 
         """
-        return f"Current mode for NPC {self.npc_name} is {self.mode}"           
+        return f"Current mode for NPC {self.npc_name} is {self.mode}"          
 
     
     
