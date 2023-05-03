@@ -1,17 +1,14 @@
 import random
-<<<<<<< HEAD
 import sys
 from argparse import ArgumentParser
 
-=======
-<<<<<<< HEAD
+#################################
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv
-=======
 import time 
->>>>>>> b220e78665792e45dcebded0a7b30b9fec488643
->>>>>>> 967d68d10f40aabd6241ad6aa95cb7e6fb99c3ec
+#################################
+
 """
 The following is a game called Concentration. You are able to play by yourself
 or with the computer. The goal of the game is to name more object of the
@@ -70,8 +67,6 @@ class Concentration:
                 # continue
         self.reset_turns(player, player_list)
     
-<<<<<<< HEAD
-    
     def handicap_npc(self, mode, npc):
         """
         Will give a handicap to the NPC on how "smart" it is;
@@ -110,6 +105,31 @@ class Concentration:
             adds to the players list
         """
         return player_list.append(player)
+    
+    def timer(self):
+        '''
+        This method controls the timer in the game 
+        it gives the players a certain amount of time to make a guess
+        '''
+        limit = 45
+        t1 = time.time()
+        while time.time()- t1 < limit:
+            if t1 <= limit: 
+                Player = 1
+            else: 
+                t1 > limit
+                elimination = player_dict.pop(Player)
+                return f"You hestitated, {elimination} is eliminatined"
+            
+    def player_words(self, player_words):
+        '''
+        This functions holds player words and keeps track of the guess made
+        by all players 
+        '''
+        
+        self.player_words = player_words
+        player_words = {Player:[]} 
+    
     
     # def timer(self):
     #     start_time = time.time()
@@ -161,12 +181,7 @@ if __name__ == '__main__':
     args = argesparse(sys.argv[1:])
     main(args.filepath, args.name)
 
-=======
-    'Adds player to the game'
-    def add_players(self, player_dict):
-        return player_dict[self.name]
-    
-<<<<<<< HEAD
+#this is where the leaderboard starts
     'Writes the players score onto a csv file'
     def record_score(self, name, score, category):
         with open('leaderboard.csv', mode = 'a') as filepath:
@@ -200,36 +215,4 @@ if __name__ == '__main__':
         ax.set_title('Scores by Category')
         ax.set_xticklabels(categories)
         plt.show()
-        
-        
-        
->>>>>>> 967d68d10f40aabd6241ad6aa95cb7e6fb99c3ec
-
-    
-    def timer(self):
-        '''
-        This method controls the timer in the game 
-        it gives the players a certain amount of time to make a guess
-        '''
-        limit = 45
-        t1 = time.time()
-        while time.time()- t1 < limit:
-            if t1 <= limit: 
-                Player = 1
-            else: 
-                t1 > limit
-                elimination = player_dict.pop(Player)
-                return f"You hestitated, {elimination} is eliminatined"
-        
-            
-
-<<<<<<< HEAD
-def player_words(self, player_words):
-    '''
-    This functions holds player words and keeps track of the guess made
-    by all players 
-    '''
-    
-    self.player_words = player_words
-    player_words = {Player:[]} 
     
