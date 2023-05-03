@@ -181,7 +181,7 @@ if __name__ == '__main__':
     args = argesparse(sys.argv[1:])
     main(args.filepath, args.name)
 
-#this is where the leaderboard starts
+#this is where the leaderboard starts where Mo added
     'Writes the players score onto a csv file'
     def record_score(self, name, score, category):
         with open('leaderboard.csv', mode = 'a') as filepath:
