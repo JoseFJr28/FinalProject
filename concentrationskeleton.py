@@ -1,5 +1,11 @@
 import random
+<<<<<<< HEAD
+import pandas as pd
+import matplotlib.pyplot as plt
+import csv
+=======
 import time 
+>>>>>>> b220e78665792e45dcebded0a7b30b9fec488643
 """
 The following is a game called Concentration. You are able to play by yourself
 or with the computer. The goal of the game is to name more object of the
@@ -23,11 +29,48 @@ class Concentration:
     def npc_num(self, npc):
         return random(range(1,11))
     
-    
     'Adds player to the game'
     def add_players(self, player_dict):
         return player_dict[self.name]
     
+<<<<<<< HEAD
+    'Writes the players score onto a csv file'
+    def record_score(self, name, score, category):
+        with open('leaderboard.csv', mode = 'a') as filepath:
+            record = csv.writer(filepath, delimeter = ' ')
+            record.writerow([self.name, self.score, self.category])
+        
+    'Displays leaderboard'
+    def leaderboard(self):
+        data = pd.read("leaderboard.csv")
+        data = data["score" > 5]
+        data = data.groupby("name")
+        print(data)
+        
+    'Displays Score Distribution'
+    def score_distribution(self):
+        names = []
+        scores = []
+        categories = []
+        
+        with open(csv_filename, mode='r') as scores_file:
+            score_reader = csv.reader(scores_file)
+            for row in score_reader:
+                names.append(row[0])
+                scores.append(int(row[1]))
+                categories.append(row[2])
+                
+        fig, ax = plt.subplots()
+        ax.bar(names, scores)
+        ax.set_xlabel('Names')
+        ax.set_ylabel('Scores')
+        ax.set_title('Scores by Category')
+        ax.set_xticklabels(categories)
+        plt.show()
+        
+        
+        
+=======
     
     def timer():
         start_time = time.time()
@@ -44,3 +87,4 @@ class Concentration:
 def player_words():
     pass
     
+>>>>>>> b220e78665792e45dcebded0a7b30b9fec488643
