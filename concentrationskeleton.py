@@ -29,18 +29,31 @@ class Concentration:
         return player_dict[self.name]
     
     
-    def timer():
-        start_time = time.time()
-        response = time.time()
-        time_lasp = start_time - response
-        return time_lasp
-        if time_lasp > avg_time():
-            return f"You hestitated, {winner} wins"
-        elif():
-            time_lasp <= avg_time
-            continue
+    def timer(self):
+        '''
+        This method controls the timer in the game 
+        it gives the players a certain amount of time to make a guess
+        '''
+        limit = 45
+        t1 = time.time()
+        while time.time()- t1 < limit:
+            if t1 <= limit: 
+                Player = 1
+            else: 
+                t1 > limit
+                elimination = player_dict.pop(Player)
+                return f"You hestitated, {elimination} is eliminatined"
+        
             
 
-def player_words():
-    pass
+def player_words(self, player_words):
+    '''
+    This functions holds player words and keeps track of the guess made
+    by all players 
+    '''
+    
+    self.player_words = player_words
+    player_words = {Player:[]} 
+    
+        
     
