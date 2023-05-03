@@ -70,7 +70,7 @@ class Concentration:
         
         
         
-=======
+
     
     def timer(self):
         '''
@@ -99,11 +99,3 @@ def player_words(self, player_words):
     self.player_words = player_words
     player_words = {Player:[]} 
     
-        
-    
-=======
-def player_words():
-    pass
-    
->>>>>>> b220e78665792e45dcebded0a7b30b9fec488643
->>>>>>> 4c21997f7e90b59da2a137a3f601441fbc716e77
