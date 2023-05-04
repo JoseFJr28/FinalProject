@@ -25,7 +25,7 @@ def training(mode):
     keep = input("Would you like to start? Type y")
     count = 0
     wrong = 0
-    if mode is "Easy":
+    if mode == "Easy":
         print(f"Your mode is Easy")
         while keep != "n":
             word = random.choice(words)
@@ -41,7 +41,7 @@ def training(mode):
                 print(f"Nice try! The answer is {word}")
                 wrong += 1
                 keep = input("Would you like to keep going? y or n")
-    elif mode is "Medium":
+    elif mode == "Medium":
         print(f"Your mode is Medium \n")
         while keep != "n":
             word = random.choice(words)

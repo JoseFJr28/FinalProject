@@ -49,8 +49,15 @@
         }
     }, 
     "Hard Mode": {
-        "NBA Players": ["John Starks", "RJ Barrett", "Jimmy Butler", "LeBron James", "Michael Jordan", "Nikola Jokic",
-         "Joel Embiid", "Jayson Tatum", "Derrick White", ""]
+        "NBA Players who played during 2010-2011": ["Jeff Adrien", "Arron Afflalo", "Maurice Ager", "Alexis Ajinca", "Cole Aldrich", "LaMarcus Aldridge",
+    "Joe Alexander", "Ray Allen", "Malik Allen", "Tony Allen", "Al-Farouq Aminu", "Lou Amundson", "David Andersen", "Chris Andersen", "Ryan Anderson",
+     "James Anderson", "Carmelo Anthony", "Joel Anthony", "Gilbert Arenas", "Trevor Ariza", "Hilton Armstrong", "Carlos Arroyo", "Darrell Arthur", "Omer Asik",
+    "D.J. Augustin", "Kelenna Azubuike", "Luke Babbitt", "Renaldo Balkman", "Marcus Banks", "Leandro Barbosa", "Jose Juan Barea", "Andrea Bargnani", 
+    "Matt Barnes", "Earl Barron", "Brandon Bass", "Tony Battle", "Shane Battier", "Nicolas Batum", "Jerry Bayless", "Michael Beasley", "Rodrigue Beabois",
+    "Marco Belinelli", "Charlie Bell", "Raja Bell", "Mike Bibby", "Andris Biedrins", "Chauncey Billups", "DeJuan Blair", "Steve Blake", "Andray Blatche",
+    "Eric Bledsoe", "Keith Bogans", "Andrew Bogut", "Matt Bonner", "Trevor Booker", "Carlos Boozer", "Chris Bosh", "Earl Boykins", "Craig Brackins", "Avery Bradley",
+    "Elton Brand", "Ronnie Brewer", "Corey Brewer", "Jon Brockman", "Aaron  Brooks", "Derrick Brown", "Kwame Brown", "Shannon Brown", "Kobe Bryant", "Chase Budinger",
+    "Rasual Butler", "Caron Butler", "Will Bynum", "Andrew Bynum"]
     }
     
 
