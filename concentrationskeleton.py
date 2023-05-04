@@ -146,6 +146,8 @@ def argesparse(args):
     cmd_obj = ArgumentParser()
     cmd_obj.add_argument("name1", help="name1 is the Players name")
     cmd_obj.add_argument("npc1", help="The computer player")
+    start = Concentration()
+    start.
     
     return cmd_obj.parse_args(args)
     
@@ -182,10 +184,11 @@ if __name__ == '__main__':
     main(args.filepath, args.name)
 
 #this is where the leaderboard starts where Mo added
+#Make sure to mention any pip installs
     'Writes the players score onto a csv file'
     def record_score(self, name, score, category):
-        with open('leaderboard.csv', mode = 'a') as filepath:
-            record = csv.writer(filepath, delimeter = ' ')
+        with open('leaderboard.csv', mode = 'a', encoding='utf-8') as filepath:
+            record = csv.writer('leaderboard.csv', dialect='excel', delimeter = ' ')
             record.writerow([self.name, self.score, self.category])
         
     'Displays leaderboard'
