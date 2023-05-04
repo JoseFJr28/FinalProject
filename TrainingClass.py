@@ -34,6 +34,10 @@ class Training:
             with open("FinalProject/5-8.txt", "r") as f_5_8:
                 for words in f_5_8:
                     self.l_5_8.append(words.split(", "))
+        if mode == 'whe' | 'whm' | 'whh':
+            with open("FinalProject/9-15.txt", "r") as f_9_15:
+                for words in f_9_15:
+                    self.l_9_15.append(words.split(", "))
         keep = input("Would you like to start? Type y")
         count = 0
         wrong = 0
@@ -42,7 +46,7 @@ class Training:
             while keep != "n":
                 word = random.choice(Training.l_3_5)
                 print(f"Your word is {word}")
-                time.sleep(9)
+                time.sleep(8)
                 print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
                 ans = input("What word did you see?")
                 if ans == word:
@@ -59,12 +63,28 @@ class Training:
             while keep != "n":
                 l5 = (['a','a', 'a', 'a', 'a'], ['a', 'a', 'a', 'a'], ['a', 'a', 'a']) 
                 d = random.choice(l5)
-                for str in d:
-                    print(random.randint(0,9), end = "")
+                num = ''
+                for i in d:
+                    num += str(random.randint(0, 9))
+                    cn = int(num)
+                print(f"Your number is {cn}")
+                time.sleep(9)
+                ans = input("What number did you see?")
+                if ans == cn:
+                    print(f"Good job! You got it right. The number is {cn}!")
+                    count += 1
+                else:
+                    print(f"Nice try! The answer is {cn}.")
+                    wrong += 1
+                    keep = input("Would you like to keep going? y or n")
+                return f"Nice session. You've answered {count+wrong} questions with {count} being correct and {wrong} being incorrect."
+                    
+                    
+                
                     
                     
 def main():
-    
+    pass
 
 if __name__ == "__main__":
     main()

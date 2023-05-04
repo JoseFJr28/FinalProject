@@ -1,17 +1,14 @@
 import random
 import sys
 from argparse import ArgumentParser
-from FinalCategoryListTesting2 import Categories
-from testingConcentration import Player
-import NPC
 
 #################################
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv
+=======
 import time 
-#################################
-
+>>>>>>> b220e78665792e45dcebded0a7b30b9fec488643
 """
 The following is a game called Concentration. You are able to play by yourself
 or with the computer. The goal of the game is to name more object of the
@@ -157,47 +154,45 @@ class Concentration:
             # pass
     
     
-def main():
-    answer = input("Welcome To Concentration 64!!!! Ready to begin your journey of fun (Yes/No)?")
-    if answer.lower() == 'Yes'.lower():
-        print("Great! Lets begin!")
-        print("""NOTE: If there is only 1 player in the game you will automatically have a computer player to go against.
-              If you want to include a computer player just type npc""")
-        player_count = int(input("How many players will be there? (1-4)"))
-        if player_count == 1:
-            player_name = input("What is your name? ")
-            player1 = Player(player_name)
-            npc_player = NPC(mode)
-            Concentration.players_list.append(player1)
-            Concentration.players_list.append(npc_player)
-            print("Let the games begin")
-            start_game(Concentration.players_list)
-        elif player_count > 1:
-            start = 0
-            while start < player_count:
-                player = input("What's your name? ")
-                if player == 'npc':
-                    new_npc = NPC(mode)
-                    Concentration.players_list.append(new_npc)
-                else:
-                    Concentration.players_list.append(player)
-                start += 1
-            print("Let the games begin")
-            start_game(Concentration.players_list)
-        elif player_count > 4:
-            print("Sorry! That is too many players. The game will crash now")
-    elif answer.lower() == 'No'.lower():
-        print("Okay! We tried :( Just know I could've beaten you with half my power!)")
-    else:
-        print("""So you don't know wha to say? Well I will say it for you. Thank You come again! \n
-              Don't forget to leave a 5 star rating on Yelp""")
+    cmd_obj = ArgumentParser()
+    cmd_obj.add_argument("name1", help="name1 is the Players name")
+    cmd_obj.add_argument("npc1", help="The computer player")
+    
+    return cmd_obj.parse_args(args)
+    
+    
+def main(name1, name2, name3, name4, npc_name = "Sheldon"):
+    filenames = ['categories1.json', 'categories2.json']
+    categories = load_words(filenames)
 
+    players = [ComputerPlayer()] + [HumanPlayer(f'Human {i}') for i in range(1, 3)]
+
+    while True:
+        print("Choose a category:", ', '.join(categories.keys()))
+        category = input().strip()
+
+        if category not in categories:
+            print("Invalid category. Please choose from the list.")
+            continue
+
+        for player in players:
+            if isinstance(player, ComputerPlayer):
+                word = player.choose_word(category, categories)
+                print(f"{player.name} chose: {word}")
+            else:
+                word = player.choose_word()
+
+            if player.is_eliminated(word):
+                print(f"{player.name} is eliminated!")
+                return
+            else:
+                player.update_used_words(word)
 
 if __name__ == '__main__':
-    main()
+    args = argesparse(sys.argv[1:])
+    main(args.filepath, args.name)
 
 #this is where the leaderboard starts where Mo added
-#Make sure to mention any pip installs
     'Writes the players score onto a csv file'
     def record_score(self, name, score, category):
         with open('leaderboard.csv', mode = 'a', encoding='utf-8') as filepath:
@@ -212,12 +207,12 @@ if __name__ == '__main__':
         print(data)
         
     'Displays Score Distribution'
-    def score_distribution(self):
+    def score_distribution():
         names = []
         scores = []
         categories = []
         
-        with open(csv_filename, mode='r') as scores_file:
+        with open("leaderboard.csv", mode='r') as scores_file:
             score_reader = csv.reader(scores_file)
             for row in score_reader:
                 names.append(row[0])
@@ -231,4 +226,24 @@ if __name__ == '__main__':
         ax.set_title('Scores by Category')
         ax.set_xticklabels(categories)
         plt.show()
+        
+        
+        
+=======
     
+    def timer():
+        start_time = time.time()
+        response = time.time()
+        time_lasp = start_time - response
+        return time_lasp
+        if time_lasp > avg_time():
+            return f"You hestitated, {winner} wins"
+        elif():
+            time_lasp <= avg_time
+            continue
+            
+
+def player_words():
+    pass
+    
+>>>>>>> b220e78665792e45dcebded0a7b30b9fec488643

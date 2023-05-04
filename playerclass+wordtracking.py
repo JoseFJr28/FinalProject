@@ -1,9 +1,16 @@
 
 class Player:
+    all_used_words = set()
+    
     def __init__(self, name, status):
-        self.name = name
+        self.name = input(name)
         self.status = status
         self.used_words = set()
+    
+    def update_used_words(self, word):
+        self.used_words.add(word)
+        self.all_used_words.add(word)
+        
 
     
 
@@ -14,11 +21,22 @@ class HumanPlayer(Player):
     def __repr__(self):
         return f"Player {self.name} is {self.status}"
     
-    def update_inventory(self, word):
-        self.update_inventory.add(word)
 
-    def words_used(self, word):
-        return word in self.used_words
+    def status(self, word):
+        while True:
+            if word in self.all_used_words:
+                print(f"{self.name} has used {word}")
+            elif word not in self.all_used_words:
+                print(f"{self.name} {input(word)}")
+            else:
+                print(f"{self.name} is the winner")
+                
+   
+    def scoring(self, score):
+       score = len(self.used_words)
+       return f"{self.name} {score}"
+   
+   
     
         
     
