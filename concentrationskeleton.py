@@ -1,4 +1,5 @@
 import random
+<<<<<<< HEAD
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv
@@ -12,11 +13,20 @@ category options. There are 4 modes: easy, intermediate, hard, and impossible.
 class Concentration:
     
     """This defines the game"""
-    def __init__(self, game, player_list):
-        self.game = game
+    def __init__(self, player_list):
         self.player_listt = player_list
         
-    
+    def start_game(self, player_list):
+        game_order = self.order(player_list)
+        [f"By the power invested in me this how the order of who goes first to last: {x} " for x in game_order]
+        difficulty = input("Choose your mode? (Easy/Medium/Hard/Impossible)")
+        
+        category = input("Now choose a category? (Animals/Card Games/Training) ")
+        game_state = self.npc_checker(game_order)
+            
+            
+        
+        
     def order(self, player_list):
         """
         How the order of the players will be determined, randomly
@@ -27,6 +37,9 @@ class Concentration:
         """
         order = random.sample(player_list, k = len(player_list))
         return order
+
+    def npc_checker (self, player_list):
+        return True if "Sheldon" in player_list else False
     
     
     def reset_turns(self, player, player_list):
@@ -61,7 +74,7 @@ class Concentration:
                 # continue
         self.reset_turns(player, player_list)
     
-    def handicap_npc(self, mode, npc):
+    def handicap_npc(self, mode):
         """
         Will give a handicap to the NPC on how "smart" it is;
         Args:
@@ -78,14 +91,14 @@ class Concentration:
             else:
                 return brain = word_count
         """
-        if mode.lower() == 'easy':
-            return npc.brain == random.randrange(1,11)
-        elif mode.lower() == 'medium':
-            return npc.brain == random.randrange(1,20)
-        elif mode.lower() == 'hard':
-            return npc.brain == random.randrange(30,50)
-        elif mode.lower() == 'impossible':
-            return npc.brain == self.brain
+        if mode.lower() == 'easy'.lower():
+            return random.randrange(1,11)
+        elif mode.lower() == 'medium'.lower():
+            return random.randrange(1,20)
+        elif mode.lower() == 'hard'.lower():
+            return random.randrange(30,50)
+        elif mode.lower() == 'impossible'.lower():
+            return self.brain
         else:
             return f"That mode is not available" 
     
@@ -134,8 +147,7 @@ class Concentration:
     #         return f"You hestitated, {winner} wins"
     #     else():
             # pass
-
-def argesparse(args):
+    
     
     cmd_obj = ArgumentParser()
     cmd_obj.add_argument("name1", help="name1 is the Players name")
@@ -144,10 +156,11 @@ def argesparse(args):
     return cmd_obj.parse_args(args)
     
     
+<<<<<<< HEAD
     'Writes the players score onto a csv file'
     def record_score(self, name, score, category):
-        with open('leaderboard.csv', mode = 'a') as filepath:
-            record = csv.writer(filepath, delimeter = ' ')
+        with open('leaderboard.csv', mode = 'a', encoding='utf-8') as filepath:
+            record = csv.writer('leaderboard.csv', dialect='excel', delimeter = ' ')
             record.writerow([self.name, self.score, self.category])
         
     'Displays leaderboard'
