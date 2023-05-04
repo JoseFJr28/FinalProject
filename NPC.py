@@ -1,10 +1,9 @@
+import random
 """
 This is the computer class or NPC for short. It will set up the npc reaction for
 the game of concentration. 
 
 """
-
-import random
 
 class NPC:
     """
@@ -31,64 +30,7 @@ class NPC:
         """
         This will print out hte NPC name and provide the current score 
         """
-        return f"Current mode for NPC {self.npc_name} is {self.mode}"
-
-    def handicap_npc(self, brain, difficulty, dict):
-        """
-        Will give a handicap to the NPC on how "smart" it is;
-        Args:
-            mode(str): The difficulty for the npc
-            dict(dictionary of list): a dictionary of list with the categories
-            brain(int)= the amount of words it can remember
-        Returns:
-            if self.mode == lower("easy") and word_count >= 20 and word_count <= 30:
-                return brain = random(1,11)
-            elif  self.mode == lower("intermediate") and word_count > 30 and word_count <= 50:
-                return brain = random(1, 20)
-            elif self.mode == lower("hard") and word_count > 50 and word_count <= 100:
-                return brain = random(30, 50)
-            else:
-                return brain = word_count
-        """
-        if difficulty.lower() == 'easy':
-            return brain == random.randrange(1,11)
-        elif difficulty.lower() == 'medium':
-            return brain == random.randrange(1,20)
-        elif difficulty.lower() == 'hard':
-            return brain == random.randrange(30,50)
-        elif difficulty.lower() == 'impossible':
-            return brain == dict
-        else:
-            return f"That mode is not available" 
-            
-    
-    def handicap_npc(self, difficulty, dict):
-        """
-        Will give a handicap to the NPC on how "smart" it is;
-        Args:
-            mode(str): The difficulty for the npc
-            dict(dictionary of list): a dictionary of list with the categories
-            brain(int)= the amount of words it can remember
-        Returns:
-            if self.mode == lower("easy") and word_count >= 20 and word_count <= 30:
-                return brain = random(1,11)
-            elif  self.mode == lower("intermediate") and word_count > 30 and word_count <= 50:
-                return brain = random(1, 20)
-            elif self.mode == lower("hard") and word_count > 50 and word_count <= 100:
-                return brain = random(30, 50)
-            else:
-                return brain = word_count
-        """
-        if difficulty.lower() == 'easy':
-            return self.brain == random.randrange(1,11)
-        elif difficulty.lower() == 'medium':
-            return self.brain == random.randrange(1,20)
-        elif difficulty.lower() == 'hard':
-            return self.brain == random.randrange(30,50)
-        elif difficulty.lower() == 'impossible':
-            return self.brain == self.head
-        else:
-            return f"That mode is not available" 
+        return f"Current mode for NPC {self.npc_name} is {self.mode}"          
 
     
     
