@@ -1,11 +1,7 @@
 import random
-<<<<<<< HEAD
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv
-=======
-import time 
->>>>>>> b220e78665792e45dcebded0a7b30b9fec488643
 """
 The following is a game called Concentration. You are able to play by yourself
 or with the computer. The goal of the game is to name more object of the
@@ -33,7 +29,6 @@ class Concentration:
     def add_players(self, player_dict):
         return player_dict[self.name]
     
-<<<<<<< HEAD
     'Writes the players score onto a csv file'
     def record_score(self, name, score, category):
         with open('leaderboard.csv', mode = 'a') as filepath:
@@ -48,12 +43,12 @@ class Concentration:
         print(data)
         
     'Displays Score Distribution'
-    def score_distribution(self):
+    def score_distribution():
         names = []
         scores = []
         categories = []
         
-        with open(csv_filename, mode='r') as scores_file:
+        with open("leaderboard.csv", mode='r') as scores_file:
             score_reader = csv.reader(scores_file)
             for row in score_reader:
                 names.append(row[0])
@@ -70,21 +65,3 @@ class Concentration:
         
         
         
-=======
-    
-    def timer():
-        start_time = time.time()
-        response = time.time()
-        time_lasp = start_time - response
-        return time_lasp
-        if time_lasp > avg_time():
-            return f"You hestitated, {winner} wins"
-        elif():
-            time_lasp <= avg_time
-            continue
-            
-
-def player_words():
-    pass
-    
->>>>>>> b220e78665792e45dcebded0a7b30b9fec488643
