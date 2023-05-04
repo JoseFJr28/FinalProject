@@ -1,10 +1,24 @@
 import random
 from argparse import ArgumentParser
-from FinalCategoryListTesting2 import Categories
-from testingConcentration import Player
+from alphatestingcategorieslist import Categories
 #################################
 
 #################################
+class Player:
+    """
+    This initilizes what a player consit of
+    Attributes:
+        name(str): The name of the player
+        
+    
+    """
+    def __init__(self, name, turn_indicator):
+        self.name = name
+        self.turn_indicator = turn_indicator
+        self.used_words = set()
+        
+    def __repr__(self):
+        return f'{self.name}'
 
 
 """
