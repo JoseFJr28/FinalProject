@@ -12,10 +12,10 @@ def mode():
     Attributes:
         res (str): number of seconds that user inputs to determine the mode of difficulty
     """
-    res = str(input(f"Would you like to 10 seconds, 7 seconds, or 3 seconds to memorize the word? Respond with num only."))
-    if res == "10":
+    res = int(input(f"Would you like to 10 seconds, 7 seconds, or 3 seconds to memorize the word? Respond with num only."))
+    if res == int("10"):
         mode = "Easy"
-    elif res == "7":
+    elif res == int("7"):
         mode = "Medium"
     else:
         mode = "Hard"
@@ -75,8 +75,7 @@ def training(mode):
                 keep = input("Would you like to keep going? y or n")
     print(f"Nice session. You've got {count} words right and {wrong} words wrong! Keep practicing your memory training!")
     
-mode()
-training(mode)
+training(mode())
             
     
         

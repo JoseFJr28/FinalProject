@@ -69,6 +69,7 @@ class Training:
                     cn = int(num)
                 print(f"Your number is {cn}")
                 time.sleep(9)
+                print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
                 ans = input("What number did you see?")
                 if ans == cn:
                     print(f"Good job! You got it right. The number is {cn}!")
