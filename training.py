@@ -2,7 +2,7 @@ import time
 import random
 
 #demo stages of method, will insert into class and also import list of words from a separate file for the final project
-words = ['hill', 'vein', 'queen', 'deafening','malicious', 'womanly', 'busy', 'calculate', 'thrill', 'tenuous', 'melt' 'paltry', 'first', 'own', 'sock'
+words = ['hill', 'vein', 'queen', 'deafening','malicious', 'womanly', 'busy', 'calculate', 'thrill', 'tenuous', 'melt', 'paltry', 'first', 'own', 'sock'
          ,'rifle', 'cause', 'peaceful', 'arithmetic', 'disillusioned', 'quaint', 'detail', 'rock', 'clap', 'settle', 'tie', 'various', 'property', 'elephant','sloth'] 
 
 
@@ -75,9 +75,29 @@ def training(mode):
                 keep = input("Would you like to keep going? y or n")
     print(f"Nice session. You've got {count} words right and {wrong} words wrong! Keep practicing your memory training!")
     
-training(mode())
-            
+
+
+def wmode():
+    w_t = input("Would you like to practice with words or numbers (w or n)")
+    if w_t == 'w':
+        w1 = (input("Would you like to memorize words with 3-5 letters, 6-8 letters, or 9-15 letters? Respond with 3, 6, or 9."))
+        w2 = (input("Would you like to memorize the word in 2 seconds, 5 seconds, or 8 seconds? Respond with 2, 5, or 8."))
+        mode = ('wee' if w1 == str(3) and w2 == str(8) else 'wem' if w1 == str(3) and w2 == str(5) else 'weh' if w1 == str(3) and w2 == str(2) 
+                else 'wme' if w1 == str(6) and w2 == str(8) else 'wmm' if  w1 == str(6) and w2 == str(5) else 'wmh' if w1 == str(6) and w2 == str(2)
+                else 'whe' if w1 == str(9) and w2 == str(8) else 'whm' if w1 == str(9) and w2 == str(5) else 'whh' if w1 == str(9) and w2 == str(2)
+                else 'insane words')
+        return mode
+    else:
+        w3 = str(input("Would you like to memorize the order of 3-5 numbers, 6-9 numbers, or 10-11 numbers? Response with 3, 6, or 10."))
+        w4 = str(input("Would you like to memorize the numbers in 3 seconds, 6 seconds, or 9 seconds? Respond with 3, 6, or 9."))
+        mode = ('nee' if w3 == 3 and w4 == 9 else 'nem' if w3 == 3 and w4 == 6 else 'neh' if w3 == 3 and w4 == 3 
+                else 'nme' if w3 == 6 and w4 == 9 else 'nmm' if  w3 == 6 and w4 == 6 else 'nmh' if w3 == 6 and w4 == 3
+                else 'nhe' if w3 == 10 and w4 == 9 else 'nhm' if w3 == 10 and w4 == 6 else 'nhh' if w3 == 10 and w4 == 3
+                else 'insane numbers')
+        return mode
     
-        
+print(wmode())
+            
+           
         
     
