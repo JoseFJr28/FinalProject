@@ -200,18 +200,6 @@ class Concentration:
         respone is how long it took to respond
         time_lasp is the time between the start time and response time 
         '''
-    avg_time = 45.0
-    start_time = time.time()
-    response = time.start()
-    time_lasp = start_time - response
-    return time_lasp
-    if time_lasp <= avg_time:
-        pass
-    else:
-        time_lasp > avg_time
-        return f"You hestitated, {winner} wins"
-        user_input = input("")
-        
         t1 = time.time()
         while time.time()- t1 < limit: 45
         if t1 <= limit: 
