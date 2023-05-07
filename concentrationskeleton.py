@@ -124,7 +124,7 @@ class Concentration:
                 Player = 1
             else: 
                 t1 > limit
-                elimination = player_dict.pop(Player)
+                elimination = player_list.pop(Player)
                 return f"You hestitated, {elimination} is eliminatined"
             
     def player_words(self, player_words):
