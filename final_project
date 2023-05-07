@@ -17,5 +17,6 @@ def timer():
         elimination = player_dict.pop(Player)
         return f"You hestitated, {elimination} is eliminatined"
         
+def player_words(self):
     
     
