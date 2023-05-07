@@ -2,46 +2,45 @@ import random
 import time
        
 class Training:
-    def __init__(self, mode = ''):
-        self.modes = mode
+    def __init__(self):
         self.l_3_5 = []
         self.l_5_8 = []
         self.l_9_15 = []
     def mode():
         w_t = input("Would you like to practice with words or numbers (w or n)")
         if w_t == 'w':
-            w1 = input("Would you like to memorize words with 3-5 letters, 6-8 letters, or 9-15 letters? Respond with 3, 6, or 9.")
-            w2 = input("Would you like to memorize the word in 2 seconds, 5 seconds, or 8 seconds? Respond with 2, 5, or 8.")
-            mode = ('wee' if w1 == 3 and w2 == 8 else 'wem' if w1 == 3 and w2 == 5 else 'weh' if w1 == 3 and w2 == 2 
-                    else 'wme' if w1 == 6 and w2 == 8 else 'wmm' if  w1 == 6 and w2 == 5 else 'wmh' if w1 == 6 and w2 == 2
-                    else 'whe' if w1 == 9 and w2 == 8 else 'whm' if w1 == 9 and w2 == 5 else 'whh' if w1 == 9 and w2 == 2
+            w1 = str(input("Would you like to memorize words with 3-5 letters, 6-8 letters, or 9-15 letters? Respond with 3, 6, or 9."))
+            w2 = str(input("Would you like to memorize the word in 2 seconds, 5 seconds, or 8 seconds? Respond with 2, 5, or 8."))
+            mode = ('wee' if w1 == str(3) and w2 == str(8) else 'wem' if w1 == str(3) and w2 == str(5) else 'weh' if w1 == str(3) and w2 == str(2) 
+                    else 'wme' if w1 == str(6) and w2 == str(8) else 'wmm' if  w1 == str(6) and w2 == str(5) else 'wmh' if w1 == str(6) and w2 == str(2)
+                    else 'whe' if w1 == str(9) and w2 == str(8) else 'whm' if w1 == str(9) and w2 == str(5) else 'whh' if w1 == str(9) and w2 == str(2)
                     else 'insane words')
             return mode
         else:
-            w3 = input("Would you like to memorize the order of 3-5 numbers, 6-9 numbers, or 10-11 numbers? Response with 3, 6, or 10.")
-            w4 = input("Would you like to memorize the numbers in 3 seconds, 6 seconds, or 9 seconds? Respond with 3, 6, or 9.")
+            w3 = str(input("Would you like to memorize the order of 3-5 numbers, 6-9 numbers, or 10-11 numbers? Response with 3, 6, or 10."))
+            w4 = str(input("Would you like to memorize the numbers in 3 seconds, 6 seconds, or 9 seconds? Respond with 3, 6, or 9."))
             mode = ('nee' if w3 == 3 and w4 == 9 else 'nem' if w3 == 3 and w4 == 6 else 'neh' if w3 == 3 and w4 == 3 
                     else 'nme' if w3 == 6 and w4 == 9 else 'nmm' if  w3 == 6 and w4 == 6 else 'nmh' if w3 == 6 and w4 == 3
-                    else 'nhe' if w3 == 9 and w4 == 9 else 'nhm' if w3 == 9 and w4 == 6 else 'nhh' if w3 == 9 and w4 == 3
+                    else 'nhe' if w3 == 10 and w4 == 9 else 'nhm' if w3 == 10 and w4 == 6 else 'nhh' if w3 == 10 and w4 == 3
                     else 'insane numbers')
             return mode
-    def training_exercise(self, mode):
-        if mode == 'wee' | 'wem' | 'weh':
+    def training_exercise(self):
+        if Training.mode == 'wee' or 'wem' or 'weh':
             with open("FinalProject/3-5.txt", "r") as f_3_5:
                 for words in f_3_5:
                     self.l_3_5.append(words.split(", "))
-        if mode == 'wme' | 'wmm' | 'wmh':
+        if Training.mode == 'wme' or 'wmm' or 'wmh':
             with open("FinalProject/5-8.txt", "r") as f_5_8:
                 for words in f_5_8:
                     self.l_5_8.append(words.split(", "))
-        if mode == 'whe' | 'whm' | 'whh':
+        if Training.mode == 'whe' or 'whm' or 'whh':
             with open("FinalProject/9-15.txt", "r") as f_9_15:
                 for words in f_9_15:
                     self.l_9_15.append(words.split(", "))
         keep = input("Would you like to start? Type y")
         count = 0
         wrong = 0
-        if mode == "wee":
+        if Training.mode == "wee":
             print(f"You chose an easy mode regarding both the count of letters and the time!")
             while keep != "n":
                 word = random.choice(Training.l_3_5)
@@ -58,7 +57,7 @@ class Training:
                     wrong += 1
                     keep = input("Would you like to keep going? y or n")
             return f"Nice session. You've got {count} words right and {wrong} words wrong! Keep practicing your memory training!"
-        elif mode == "nee":
+        elif Training.mode == "nee":
             print(f"You chose an easy mode regarding both the count of numbers and the time!")
             while keep != "n":
                 l5 = (['a','a', 'a', 'a', 'a'], ['a', 'a', 'a', 'a'], ['a', 'a', 'a']) 
@@ -82,13 +81,7 @@ class Training:
                     
                     
                 
-                    
-                    
-def main():
-    pass
-
-if __name__ == "__main__":
-    main()
+Training.training_exercise(Training.mode())
     
                 
     

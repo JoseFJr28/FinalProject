@@ -1,5 +1,4 @@
 import random
-<<<<<<< HEAD
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv
@@ -156,7 +155,7 @@ class Concentration:
     return cmd_obj.parse_args(args)
     
     
-<<<<<<< HEAD
+
     'Writes the players score onto a csv file'
     def record_score(self, name, score, category):
         with open('leaderboard.csv', mode = 'a', encoding='utf-8') as filepath:
@@ -195,15 +194,21 @@ class Concentration:
         
     
     def timer():
-        start_time = time.time()
-        response = time.time()
-        time_lasp = start_time - response
-        return time_lasp
-        if time_lasp > avg_time():
-            return f"You hestitated, {winner} wins"
-        elif():
-            time_lasp <= avg_time
-            continue
+    
+        '''
+        start_time is the start of a turn 
+        respone is how long it took to respond
+        time_lasp is the time between the start time and response time 
+        '''
+        t1 = time.time()
+        while time.time()- t1 < limit: 45
+        if t1 <= limit: 
+            Player = 1
+        else: 
+           t1 > limit
+           elimination = player_dict.pop(Player)
+           return f"You hestitated, {elimination} is eliminatined"
+        
             
 
 def player_words():
