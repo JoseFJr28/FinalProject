@@ -42,7 +42,7 @@ class NPC:
         and return a list of the words the computer will know. The words will be
         chosen at random
         
-        Ars:
+        Args:
            mode(str): difficulty of the npc
             categorty(dict): This chosen category that will have the list of 
             words in that category
