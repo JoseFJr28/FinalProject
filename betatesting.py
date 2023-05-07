@@ -279,7 +279,11 @@ def main():
             new_game.add_players(player1)
             new_game.add_players(npc_player)
             print("Let the games begin")
-            new_game.start_game(new_game.players_list)
+<<<<<<< HEAD
+            new_game.start_game(new_game.player_list)
+=======
+            new_game.start_game(new_game.player_lists)
+>>>>>>> 957eda782ddfe0326a146709b56496c4ccb135a7
         elif player_count > 1 and player_count <= 4:
             start = 0
             while start < player_count:
