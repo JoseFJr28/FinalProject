@@ -6,6 +6,15 @@ class Training:
         self.l_3_5 = []
         self.l_5_8 = []
         self.l_9_15 = []
+        with open("FinalProject/9-15.txt", "r") as f_9_15:
+                for words in f_9_15:
+                    self.l_9_15.append(words.split(", "))
+        with open("FinalProject/5-8.txt", "r") as f_5_8:
+                for words in f_5_8:
+                    self.l_5_8.append(words.split(", "))
+        with open("FinalProject/3-5.txt", "r") as f_3_5:
+                for words in f_3_5:
+                    self.l_3_5.append(words.split(", "))
     def mode():
         w_t = input("Would you like to practice with words or numbers (w or n)")
         if w_t == 'w':
@@ -25,18 +34,6 @@ class Training:
                     else 'insane numbers')
             return mode
     def training_exercise(self):
-        if Training.mode == 'wee' or 'wem' or 'weh':
-            with open("FinalProject/3-5.txt", "r") as f_3_5:
-                for words in f_3_5:
-                    self.l_3_5.append(words.split(", "))
-        if Training.mode == 'wme' or 'wmm' or 'wmh':
-            with open("FinalProject/5-8.txt", "r") as f_5_8:
-                for words in f_5_8:
-                    self.l_5_8.append(words.split(", "))
-        if Training.mode == 'whe' or 'whm' or 'whh':
-            with open("FinalProject/9-15.txt", "r") as f_9_15:
-                for words in f_9_15:
-                    self.l_9_15.append(words.split(", "))
         keep = input("Would you like to start? Type y")
         count = 0
         wrong = 0
