@@ -150,9 +150,10 @@ class Concentration:
                 return f"You hestitated, {player} is eliminatined"
     
     def check_words(self, game_words, player_words):
+        self.game_words = game_words
         x = set(game_words.managewords)
         y = set(player_words.words)
-        z = x.intersection(y)
+        z = x & y
         print(z)
         
 
