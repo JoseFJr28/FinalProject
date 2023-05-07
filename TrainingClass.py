@@ -29,28 +29,28 @@ class TrainingMemory():
         l_9_15 = []
         if re.search("^w.", mode):
             if mode[1] == 'h':
-                with open("FinalProject/9-15.txt", "r") as f_9_15:
+                with open("9-15.txt", "r") as f_9_15:
                     for words in f_9_15:
                         l_9_15.extend(words.split(", "))
                         return l_9_15
             elif mode[1] == 'm':
-                with open("FinalProject/6-8.txt", "r") as f_6_8:
+                with open("6-8.txt", "r") as f_6_8:
                     for words in f_6_8:
                         l_6_8.extend(words.split(", "))
                         return l_6_8
             elif mode[1] == 'e':
-                with open("FinalProject/3-5.txt", "r") as f_3_5:
+                with open("3-5.txt", "r") as f_3_5:
                     for words in f_3_5:
                         l_3_5.extend(words.split(", "))
                         return l_3_5
         elif mode == 'insane words':
-            with open("FinalProject/9-15.txt", "r") as f_9_15:
+            with open("9-15.txt", "r") as f_9_15:
                 for words in f_9_15:
                     l_9_15.extend(words.split(", "))
-            with open("FinalProject/6-8.txt", "r") as f_6_8:
+            with open("6-8.txt", "r") as f_6_8:
                 for words in f_6_8:
                     l_6_8.extend(words.split(", "))
-            with open("FinalProject/3-5.txt", "r") as f_3_5:
+            with open("3-5.txt", "r") as f_3_5:
                 for words in f_3_5:
                     l_3_5.extend(words.split(", "))
             combined = []
