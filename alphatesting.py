@@ -1,6 +1,7 @@
 import random
 from argparse import ArgumentParser
 from alphatestingcategorieslist import Categories
+from TrainingClass import Training
 #################################
 
 #################################
@@ -34,15 +35,27 @@ class Concentration:
         self.player_list = []
         
     def start_game(self, player_list):
+        #This is the order of the game
         game_order = self.order(player_list)
-        [f"By the power invested in me this how the order of who goes first to last: {x} " for x in game_order]
+       
+       #Player gets to decide 
         difficulty = input("Choose your mode? (Easy/Medium/Hard/Impossible)")
+        if difficulty.lower() == "Impossible".lower():
+            Training()
+        elif 
         
         category = input("Now choose a category? (Animals/Card Games/Training) ")
         game_state = self.npc_checker(game_order)
-            
-    def current_players(self):
-        return self.player_list
+              
+    def current_players(self, player_list):
+        """
+        Shows the current players in the game
+        Args:
+            player_list(list of players): list of players
+        Return:
+            the current players of the game
+        """
+        return f'The current players are still in the game: {player_list}'
         
         
     def order(self, player_list):
@@ -53,7 +66,8 @@ class Concentration:
         Returns:
             An order list of who goes 1st, 2nd, 3rd, 4th, etc.
         """
-        order = random.sample(player_list, k = len(player_list))
+        player = len(self.player_list)
+        order = random.sample(self.player_list, k = player)
         return order
 
     def npc_checker (self, player_list):
@@ -93,7 +107,7 @@ class Concentration:
         self.reset_turns(player, player_list)
     
     
-    def add_players(self, player_list):
+    def add_players(self,player):
         """
         Adds the current players in the game in a list
         Args:
@@ -102,7 +116,7 @@ class Concentration:
         Side effects:
             adds to the players list
         """
-        return player_list.append(self.player)
+        self.player_list.append(player)
 
 class NPC:
     """
@@ -154,7 +168,7 @@ class NPC:
         elif mode.lower() == 'hard'.lower():
             return random.randrange(30,50)
         elif mode.lower() == 'impossible'.lower():
-            return len(5)
+            
         else:
             return f"That mode is not available"        
 
