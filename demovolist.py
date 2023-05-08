@@ -1,4 +1,4 @@
-vocablist = (["wox", "raw", "out", "die", "apt", "yaw", "jab", "nis", "rew", "tap", "pip", "hep", "fob", "mum", 
+vocablist = set(["wox", "raw", "out", "die", "apt", "yaw", "jab", "nis", "rew", "tap", "pip", "hep", "fob", "mum", 
              "lat", "bub", "spa", "was", "rib", "sap", "tin", "mac", "fen", "dog", "cat", "rat", "that", "with", "this", "from", "have", "were", 
              "they", "will", "been", "more", "such", "when", "time", "than", "some", "what", "only", "into", "also", "them", "then", "said", "made", "your", "most", "over", "each", "year", 
              "work", "same", "many", "upon", "must", "well", "very", "used", "both", "life", "good", "york", "long", "high", "part", "like", "even", "make", "case", "much", "area", "fact", 
