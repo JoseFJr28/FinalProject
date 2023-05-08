@@ -1,6 +1,10 @@
+import csv
+import pandas as pd
+import matplotlib.pyplot as plt
 import random
 import time
 from betatestinglist import Categories
+
 
 class Concentration:
     
@@ -76,7 +80,7 @@ class Concentration:
         #figureout to access values and have them equal lower case as well
         while count < length2 and infinite < len(player_list):
                 
-                print("You have 5 seconds to provie an answer")
+                print("You have 5 seconds to provide an answer")
                 word = input(f"{player_list[infinite]} type your word: ")
                 
                 if word not in round.managewords and word in words or time.time() - t1 < limit:
@@ -261,6 +265,55 @@ class NPC:
                             continue
                 #prevents the infinite loop            
                     newcount += 1
+                    
+class Leaderboard:
+    ''
+    def __init__(self, name, score, category, filepath = 'leaderboard.csv'):
+        self.name = name
+        self.score = score
+        self.category = category
+        self.filepath = filepath
+        
+    'Writes the players score onto a csv file'
+    def record_score(self):
+        
+        data = []
+        data.append([self.name, self.score, self.category])
+        
+        with open(self.filepath, 'w', newline = '') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Name', 'Score', 'Category'])
+            
+            for row in data:
+                writer.writerow(row)
+        
+    'Displays leaderboard'
+    def leaderboard(self):
+        data = pd.read_csv(self.filepath)
+        data = data["Score"] > 2
+        # data = data.groupby("Name")
+        print(data)
+        
+    'Displays Score Distribution'
+    def score_distribution(self):
+        names = [self.name]
+        scores = [self.score]
+        categories = [self.category]
+        
+        with open(self.filepath, mode='r') as scores_file:
+            score_reader = csv.reader(scores_file)
+            for row in score_reader:
+                names.append(row[0])
+                scores.append(row[1])
+                categories.append(row[2])
+                
+        fig, ax = plt.subplots()
+        ax.bar(names, scores)
+        ax.set_xlabel('Names')
+        ax.set_ylabel('Scores')
+        ax.set_title('Scores by Category')
+        ax.set_xticklabels(categories)
+        plt.show()
 
 def main():
     new_game = Concentration()
