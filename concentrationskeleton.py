@@ -145,19 +145,34 @@ def argesparse(args):
     cmd_obj.add_argument("npc1", help="The computer player")
     
     return cmd_obj.parse_args(args)
-    
-    
+
+''   
+class Leaderboard:
+    ''
+    def __init__(self, name, score, category):
+        self.name = name
+        self.score = score
+        self.category = category
+        
     'Writes the players score onto a csv file'
-    def record_score(self, name, score, category):
-        with open('leaderboard.csv', mode = 'a') as filepath:
-            record = csv.writer(filepath, delimeter = ' ')
-            record.writerow([self.name, self.score, self.category])
+    def record_score(self):
+        
+        data = [[self.name, self.score, self.category]]
+        
+        filepath = 'leaderboard.csv'
+        
+        with open(filepath, 'w', newline = '') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Name', 'Score', 'Category'])
+            
+            for row in data:
+                writer.writerow(row)
         
     'Displays leaderboard'
-    def leaderboard(self):
-        data = pd.read("leaderboard.csv")
-        data = data["score" > 5]
-        data = data.groupby("name")
+    def leaderboard(self, filepath):
+        data = pd.read(filepath)
+        data = data["Score" > 2]
+        data = data.groupby("Name")
         print(data)
         
     'Displays Score Distribution'
