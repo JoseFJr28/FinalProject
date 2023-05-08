@@ -505,10 +505,53 @@ class TrainingMemory:
                 print(f"Percentage and total: {round(((count)/(count+wrong))*100, 2)}% correct, {count+wrong} words/numbers")
 
 def main():
+<<<<<<< HEAD
+    new_game = Concentration()
+    answer = input("Welcome To Concentration 64!!!! Ready to begin your journey of fun (Yes/No)? ")
+    if answer.lower() == 'Yes'.lower():
+        print("Great! Lets begin!")
+        print("""NOTE: If there is only 1 player in the game you will automatically
+        have a computer player to go against. If you want to include a computer player just type npc""")
+        player_count = int(input("How many players will be there? (1-4) "))
+        if player_count == 1:
+            player_name = input("What is your name? ")
+            player1 = Player(player_name)
+            difficulty = input("what difficulty would you prefer to play? (Easy/Medium/Hard/Impossible) ")
+            npc_player = NPC(difficulty)
+            new_game.add_players(player1)
+            new_game.add_players(npc_player)
+            print("Let the games begin")
+
+            new_game.start_game(new_game.player_list)
+
+            new_game.start_game(new_game.player_lists)
+
+        elif player_count > 1 and player_count <= 4:
+            start = 0
+            while start < player_count:
+                player_name = input("What's your name? ")
+                if player_name == 'npc':
+                    difficulty = input("what difficulty would you prefer to play? (Easy/Medium/Hard/Impossible) ")
+                    npc_player = NPC(difficulty)
+                    new_game.add_players(npc_player)
+                else:
+                    new_game.add_players(Player(player_name))
+                start += 1
+            print("Let the games begin")
+            new_game.start_game()
+        elif player_count > 4:
+            print("Sorry! That is too many players. The game will crash now")
+    elif answer.lower() == 'No'.lower():
+        print("Okay! We tried :( Just know I could've beaten you with half my power!)")
+    else:
+        print("""So you don't know wha to say? Well I will say it for you. Thank You come again!
+              Don't forget to leave a 5 star rating on Yelp""")
+=======
     print("Welcome to our project 'Concentration 64'. We offer two modes: Memory Training and the Game. Which would you like to do? (1/2)")
     print("Option 1: Training\nOption 2: Concentration 64")
     
     which_mode = (input("Answer: "))
+>>>>>>> 4c7d71b105c4829113334af455aea2d481ed3b9e
 
     if which_mode == '1':
         modes = TrainingMemory.mode()
