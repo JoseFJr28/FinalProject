@@ -191,11 +191,10 @@ class TrainingMemory():
                 print(f"Expected Incorrect Guesses: {wrong}")
                 print(f"Percentage and total: {round(((count)/(count+wrong))*100, 2)}% correct, {count+wrong} words/numbers")
     
-def main():
-    modes = TrainingMemory.mode()
-    TrainingMemory.training_exercise(modes)
+
+    
 
 
-main()
+
         
     

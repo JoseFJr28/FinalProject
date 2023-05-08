@@ -1,8 +1,11 @@
 import random
+<<<<<<< HEAD
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv
+=======
 import time 
+>>>>>>> b220e78665792e45dcebded0a7b30b9fec488643
 """
 The following is a game called Concentration. You are able to play by yourself
 or with the computer. The goal of the game is to name more object of the
@@ -12,20 +15,11 @@ category options. There are 4 modes: easy, intermediate, hard, and impossible.
 class Concentration:
     
     """This defines the game"""
-    def __init__(self, player_list):
+    def __init__(self, game, player_list):
+        self.game = game
         self.player_listt = player_list
         
-    def start_game(self, player_list):
-        game_order = self.order(player_list)
-        [f"By the power invested in me this how the order of who goes first to last: {x} " for x in game_order]
-        difficulty = input("Choose your mode? (Easy/Medium/Hard/Impossible)")
-        
-        category = input("Now choose a category? (Animals/Card Games/Training) ")
-        game_state = self.npc_checker(game_order)
-            
-            
-        
-        
+    
     def order(self, player_list):
         """
         How the order of the players will be determined, randomly
@@ -36,9 +30,6 @@ class Concentration:
         """
         order = random.sample(player_list, k = len(player_list))
         return order
-
-    def npc_checker (self, player_list):
-        return True if "Sheldon" in player_list else False
     
     
     def reset_turns(self, player, player_list):
@@ -73,7 +64,7 @@ class Concentration:
                 # continue
         self.reset_turns(player, player_list)
     
-    def handicap_npc(self, mode):
+    def handicap_npc(self, mode, npc):
         """
         Will give a handicap to the NPC on how "smart" it is;
         Args:
@@ -90,14 +81,14 @@ class Concentration:
             else:
                 return brain = word_count
         """
-        if mode.lower() == 'easy'.lower():
-            return random.randrange(1,11)
-        elif mode.lower() == 'medium'.lower():
-            return random.randrange(1,20)
-        elif mode.lower() == 'hard'.lower():
-            return random.randrange(30,50)
-        elif mode.lower() == 'impossible'.lower():
-            return self.brain
+        if mode.lower() == 'easy':
+            return npc.brain == random.randrange(1,11)
+        elif mode.lower() == 'medium':
+            return npc.brain == random.randrange(1,20)
+        elif mode.lower() == 'hard':
+            return npc.brain == random.randrange(30,50)
+        elif mode.lower() == 'impossible':
+            return npc.brain == self.brain
         else:
             return f"That mode is not available" 
     
@@ -124,7 +115,7 @@ class Concentration:
                 Player = 1
             else: 
                 t1 > limit
-                elimination = player_list.pop(Player)
+                elimination = player_dict.pop(Player)
                 return f"You hestitated, {elimination} is eliminatined"
             
     def player_words(self, player_words):
@@ -146,27 +137,42 @@ class Concentration:
     #         return f"You hestitated, {winner} wins"
     #     else():
             # pass
-    
+
+def argesparse(args):
     
     cmd_obj = ArgumentParser()
     cmd_obj.add_argument("name1", help="name1 is the Players name")
     cmd_obj.add_argument("npc1", help="The computer player")
     
     return cmd_obj.parse_args(args)
-    
-    
 
+''   
+class Leaderboard:
+    ''
+    def __init__(self, name, score, category):
+        self.name = name
+        self.score = score
+        self.category = category
+        
     'Writes the players score onto a csv file'
-    def record_score(self, name, score, category):
-        with open('leaderboard.csv', mode = 'a', encoding='utf-8') as filepath:
-            record = csv.writer('leaderboard.csv', dialect='excel', delimeter = ' ')
-            record.writerow([self.name, self.score, self.category])
+    def record_score(self):
+        
+        data = [[self.name, self.score, self.category]]
+        
+        filepath = 'leaderboard.csv'
+        
+        with open(filepath, 'w', newline = '') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Name', 'Score', 'Category'])
+            
+            for row in data:
+                writer.writerow(row)
         
     'Displays leaderboard'
-    def leaderboard(self):
-        data = pd.read("leaderboard.csv")
-        data = data["score" > 5]
-        data = data.groupby("name")
+    def leaderboard(self, filepath):
+        data = pd.read(filepath)
+        data = data["Score" > 2]
+        data = data.groupby("Name")
         print(data)
         
     'Displays Score Distribution'
@@ -192,25 +198,3 @@ class Concentration:
         
         
         
-    
-    def timer():
-    
-        '''
-        start_time is the start of a turn 
-        respone is how long it took to respond
-        time_lasp is the time between the start time and response time 
-        '''
-        t1 = time.time()
-        while time.time()- t1 < limit: 45
-        if t1 <= limit: 
-            Player = 1
-        else: 
-           t1 > limit
-           elimination = player_dict.pop(Player)
-           return f"You hestitated, {elimination} is eliminatined"
-        
-            
-
-def player_words():
-    pass
-    
