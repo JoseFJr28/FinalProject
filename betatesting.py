@@ -85,7 +85,7 @@ class Concentration:
                     print(round.managewords)
                     player_list[infinite].words.add(word)#has no attribute
                     print(player_list[infinite].words)
-                    # self.check_words(round.managewords, player_list[infinite].words)
+                    self.check_words(round.managewords, player_list[infinite].words)
                 else:
                     print(f"{player_list[infinite]} you provided a used word or you ran out of time.")
                     self.round_over(player_list[infinite], player_list)
@@ -151,9 +151,8 @@ class Concentration:
                 return f"You hestitated, {player} is eliminatined"
     
     def check_words(self, game_words, player_words):
-        self.game_words = game_words
-        x = set(game_words.managewords)
-        y = set(player_words.words)
+        x = set(game_words)
+        y = set(player_words)
         z = x & y
         print(z)
         
@@ -287,6 +286,7 @@ class TrainingMemory:
         l_3_5 = []
         l_6_8 = []
         l_9_15 = []
+        
         if re.search("^w.", mode):
             if mode[1] == 'h':
                 with open("9-15.txt", "r") as f_9_15:
@@ -303,6 +303,7 @@ class TrainingMemory:
                     for words in f_3_5:
                         l_3_5.extend(words.split(", "))
                         return l_3_5
+        
         elif mode == 'insane words':
             with open("9-15.txt", "r") as f_9_15:
                 for words in f_9_15:
@@ -318,6 +319,7 @@ class TrainingMemory:
             combined.extend(l_6_8)
             combined.extend(l_3_5)
             return combined
+        
         else:
             return None
 
@@ -375,13 +377,11 @@ class TrainingMemory:
                 
                 if mode != "insane numbers":
                     if answer == printed_number:
-                        print(f"Good job! You got it right!")
-                        print(f"\n")
+                        print(f"Good job! You got it right!\n")
                         count += 1
                         keep = input("Would you like to keep going? (y/n)")
                     else:
-                        print(f"Nice try! The answer is {printed_number}")
-                        print(f"\n")
+                        print(f"Nice try! The answer is {printed_number}\n")
                         wrong += 1
                         keep = input("Would you like to keep going? (y/n)")
                 else:
@@ -406,9 +406,9 @@ class TrainingMemory:
                     time.sleep(2)
                 else:
                     time.sleep(random.randint(1,3))
-                print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
+                print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
                 ans = str(input("What word did you see?"))
-                if ans == word:
+                if ans.lower() == word.lower():
                     if mode != 'insane words':
                         print(f"Good job! You got it right!")
                         keep = input("Would you like to keep going? (y/n)")
@@ -421,7 +421,7 @@ class TrainingMemory:
                         print(f"Aw, nice try! You can still do this! Keep practicing! The correct answer was {word}.")
                         keep = input("Would you like to keep going? (y/n)")
                     else:
-                        print(f"HAHA, not surprised. ")
+                        print(f"HAHA, not surprised. The correct answer is {word}.")
                         keep = input("PLEASE QUIT, the sight of failure makes me want to throw up. Are you going to continue (y/n)?")
                     wrong += 1
 
@@ -498,7 +498,7 @@ def main():
         elif answer.lower() == 'No'.lower():
             print("Okay! We tried :( Just know I could've beaten you with half my power!)")
         else:
-            print("""So you don't know wha to say? Well I will say it for you. Thank You come again!
+            print("""So you don't know what to say? Well I will say it for you. Thank you come again!
                 Don't forget to leave a 5 star rating on Yelp""")
 
 if __name__ == '__main__':

@@ -148,7 +148,7 @@ class TrainingMemory():
                     time.sleep(random.randint(1,3))
                 print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
                 ans = str(input("What word did you see?"))
-                if ans == word:
+                if ans.lower() == word.lower():
                     if mode != 'insane words':
                         print(f"Good job! You got it right!")
                         keep = input("Would you like to keep going? (y/n)")
@@ -161,7 +161,7 @@ class TrainingMemory():
                         print(f"Aw, nice try! You can still do this! Keep practicing! The correct answer was {word}.")
                         keep = input("Would you like to keep going? (y/n)")
                     else:
-                        print(f"HAHA, not surprised. ")
+                        print(f"HAHA, not surprised. The correct answer is {word}.")
                         keep = input("PLEASE QUIT, the sight of failure makes me want to throw up. Are you going to continue (y/n)?")
                     wrong += 1
 
@@ -192,8 +192,11 @@ class TrainingMemory():
                 print(f"Percentage and total: {round(((count)/(count+wrong))*100, 2)}% correct, {count+wrong} words/numbers")
     
 
+def main():
+    modes = TrainingMemory.mode()
+    TrainingMemory.training_exercise(modes)
     
-
+main()
 
 
         
