@@ -288,15 +288,15 @@ class Concentration:
     
     def check_words(self, game_words, player_words):
         """
-        Using set operations, we will see if their is a repeated word that has been
-        recorded in the the games manageword set.
+       This function checks the words that the user have given and compares
+       to see if the players words are not repeated
         
         Args:
-            game_words(Concentration game words): the managewords set of the game
-            player_words(a set of given word): a word with its own personal set
+            game_words(str): the managewords set of the game
+            player_words(str): a word with its own personal set
         
         Returns:
-            True if their is a word that has been used if not false
+            True for used/repeated words that false for words that haven't
         
         """
         x = game_words
