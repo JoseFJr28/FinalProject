@@ -1,12 +1,12 @@
 
 
 
-import demo_vocablist_test_test
+from demovolist import vocablist
 
 
 def words_used(word):
     catalog = set()
-    for word in demo_vocablist_test_test:
+    for word in vocablist:
         if word in catalog:
             return False
         else:
@@ -17,10 +17,10 @@ def words_used(word):
 catalog = set()
 
 def process_player_input(word):
-    if word in demo_vocablist_test_test and word not in catalog:
+    if word in vocablist and word not in catalog:
         catalog.add(word)
         return True
-    elif word in demo_vocablist_test_test and word in catalog:
+    elif word in vocablist and word in catalog:
         return False
     else:
         print("The word is not in the vocablist.")

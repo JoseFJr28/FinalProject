@@ -6,17 +6,37 @@ import time
 from betatestinglist import Categories
 import re
 
-
 class Concentration:
+    """
+    The main game itself. Concetration 64! It initilizes the game adn keep 
+    tracks of the players and words being used. Time is alos a factor.
+    
+    Attributes:
+        player_list (list of Human Players): The current players of the game
+        managewords(set of str): The words used in the game
+    
+    """
     
     def __init__(self):
         self.player_list = []
         self.managewords = set()
         
     def __repr__(self):
+        """
+        Representation of current players
+        
+        Returns:
+            the list of current players
+        """
         return f"{self.player_list}"
     
     def clap_mode(self):
+        """
+        The rhythm of the game
+        
+        Side effects:
+            prints the clap rhythm
+        """
         time.sleep(0.5)
         print("clap")
         time.sleep(0.5)
@@ -25,6 +45,12 @@ class Concentration:
         print("clap")
     
     def sequence(self, placement):
+        """
+        Givest their placement in word form
+        
+        Args:
+            placement()
+        """
         if placement == 1:
             return f"first"
         elif placement == 2:
@@ -35,6 +61,11 @@ class Concentration:
             return f"fourth"
     
     def start_game(self):
+        """
+        Displays the nursery rhyme of the game and determines the order of the
+        players
+        
+        """
         game_order = self.order(self.player_list)
         print(game_order)
         
@@ -60,38 +91,96 @@ class Concentration:
         self.round_start(game_order)
     
     def round_start(self,player_list):
-        round = Concentration()
-        category = input(("Category is: "))
+        """
+        Starts and manages the round with keeping track of the players in the 
+        player_list and makes sure words are not repeated
         
-        if "Sheldon" in player_list:
-            #npc,difficulty,category
-            'Sheldon'.handicap_npc('Sheldon', 'Sheldon'.difficulty, category)
-            'Sheldon'.npc_reader('Sheldon'.difficulty, category)
-        count = 0
-        infinite = 0
-        #Sidenote: make sure categories can be tpyed in upper/lowercase
+        Args:
+            player_list(List of Players): the current players
+            
+        Side Effects:
+            Updates the games managewords set and the Players word if valide word
+            If the word is not valid then the player gets removed from the games
+            current players list
+        """
+        round = Concentration()
+        
+        category = input(("Category is (Occupations/Animals/Card Games): "))
+        
+        #Handles the case sensitivty
+        for x in Categories:
+            if x.lower() == category.lower():
+                category == x
+        
+
+        count = 0 #Manages the amount of times we put in words
+        infinite = 0 #Manages going through the players through their turn
+        
+        #Gets the values of the keys
         words = Categories.get(category)
         
+        #Gets the length of how many words are available for that category
         length2 = 0
         for x in Categories:
             if x.lower() == category.lower():
                 length2 += len(Categories.get(category))
+        
+        #Limit for how long a person has to answer        
         limit = 5
         t1 = time.time()
-        #figureout to access values and have them equal lower case as well
+        
+        #As long as their are still enough words in the list
         while count < length2 and infinite < len(player_list):
                 
-                print("You have 5 seconds to provide an answer")
+                
+                print("You have 5 seconds to provie an answer")
                 word = input(f"{player_list[infinite]} type your word: ")
                 
-                if word not in round.managewords and word in words or time.time() - t1 < limit:
+                checklist = words
+                
+                #We put all the values into a list
+                cheetohs = self.convert_dict(checklist)
+                
+                #Check if the word is in the list, so a valid word
+                crash = self.check_cheetohs(word.lower(), cheetohs)
+                
+                #If the word was not valid or the player does not provide a word
+                #in enoguh time
+                if crash or time.time() - t1 < limit:
+                    
+                #takes the given word and puts it into a set
+                    given_word = set()
+                    given_word.add(word)
+                    
+                #checks whether the word provided is a repeat before adding to 
+                #set of the managewords
+                    question = self.check_words(round.managewords, given_word)
+                    
+                    
+                    #now adds to managewords for next round
                     round.managewords.add(word)
-                    print(round.managewords)
-                    player_list[infinite].words.add(word)#has no attribute
-                    print(player_list[infinite].words)
-                    self.check_words(round.managewords, player_list[infinite].words)
+                
+                #the results from question either True or False  
+                    if question:
+                        #Tells the player the word is already used
+                        print(f"{player_list[infinite]} you provided a used word")
+                        #Stops the round and removes the player
+                        self.round_over(player_list[infinite], player_list)
+                        #Checks if only one player left
+                        if self.is_there_a_winner(player_list):
+                            #The game is officially over announcing the winner and score
+                            self.game_over(player_list)
+                            break
+                        else: 
+                            #if player count is 2 or more we restart the round with new or same category
+                            self.round_start(player_list)
+                    else:
+                        #Not repaeated word and valid then add to players wors
+                        player_list[infinite].words.add(word)
+                    
                 else:
-                    print(f"{player_list[infinite]} you provided a used word or you ran out of time.")
+                    #the word was invalid or you ran out of time
+                    print(f"{player_list[infinite]} you provided an invalid word or you ran out of time.")
                     self.round_over(player_list[infinite], player_list)
                     if self.is_there_a_winner(player_list):
                         self.game_over(player_list)
@@ -99,22 +188,46 @@ class Concentration:
                     else: 
                         self.round_start(player_list)
                         
+                #Allows to go to the next player         
                 infinite += 1
+                #Keeps going until there are no more words to count
                 count += 1
-            
+
+                #makes it go through each player more than once until the player
+                #breaks a rule
                 if infinite == len(player_list):
                     infinite = 0
                 else:
                     continue
-    
+        
+        
     def round_over(self, player, player_list):
+        """
+        Removes player that broke the rules
+        Args:
+        player(Instance of Player): the Player
+        player_list(list of Players): The current player list
+        
+        Returns:
+            True or False
+        """
         player.ingame = False
+        score = len(player.words)
+        player.score = score
         if player in player_list:
             player_list.remove(player)
             # print(f"{player} has been elminated")
         return self.is_there_a_winner(player_list)
     
     def is_there_a_winner(self, player_list):
+        """
+        Checks to see if one player is left
+        
+        Args:
+            player_list(list of Players): the current players
+        Returns:
+            True if their is only one player left, otherwise False
+        """
         current = len(player_list)
         if current == 1:
             return True
@@ -122,10 +235,25 @@ class Concentration:
             return False
         
     def game_over(self, player_list):
-        return print(f"Player {player_list[0]} is your winner")
-        
+        """
+        Announces the winner
+        Args:
+            player_list(list of Player(s)): The last palyer
+        Returns:
+            The winner name and their score
+        """
+        score = len(player_list[0].words)
+        player_list[0].score = score
+        return print(f"Player {player_list[0]} is your winner with a score of {player_list[0].score}")     
     
     def add_players(self, player_obj):
+        """
+        Adds the Instance of the Players to the games player_list
+        Args:
+            player_list(list fo Players): a list of Players obj
+        Side Effects:
+            Updates the games player_list
+        """
         self.player_list.append(player_obj)
     
     def player_status(self, player_list, player):
@@ -135,6 +263,14 @@ class Concentration:
             return f'The current players are still in the game: {player_list}'
             
     def order(self,player_list):
+        """
+        Provides the order the players will go
+        
+        Args:
+            player_list(list of Players): the current players
+        Returns:
+            the order of who goes 1st, 2nd, 3rd, and 4th
+        """
         player = len(player_list)
         order = random.sample(player_list, k= player)
         return order
@@ -155,22 +291,83 @@ class Concentration:
                 return f"You hestitated, {player} is eliminatined"
     
     def check_words(self, game_words, player_words):
-        x = set(game_words)
-        y = set(player_words)
-        z = x & y
-        print(z)
+        """
+        Using set operations, we will see if their is a repeated word that has been
+        recorded in the the games manageword set.
         
-class Player:
+        Args:
+            game_words(Concentration game words): the managewords set of the game
+            player_words(a set of given word): a word with its own personal set
+        
+        Returns:
+            True if their is a word that has been used if not false
+        
+        """
+        x = game_words
+        y = player_words
+        a = x.intersection(y)
+        print(a)
+        size = len(a)
+        return True if size == 1 else False
     
+    def check_cheetohs(self,word, word_list):
+        """
+        Checks if the word is in the list
+        Args:
+            word(str): the word given by the player
+            word_list(list of words): The valid words
+        Returns:
+            True if its a valid option, otherwise False
+        """
+        return True if word in word_list else False
+     
+    def convert_dict(self, dict):
+        """
+        Just to acces the values and put them in a list to check validility of 
+        word given by player
+        Args:
+            dict(category dict): the provided dictionary
+        Returns:
+            the valid words
+        """
+        final = dict.values()
+        new_final = []
+        for x in final:
+            new_final.append(x)
+        
+        final_list = []
+        for y in new_final:
+            final_list.append(y.lower())
+        
+        return final_list
+
+################################################################################
+class Player:
+    """
+    Initilizes the Player for the game
+    
+    Attributes:
+        name(str): name fo the player
+        ingame(bool): the player status
+        words(set of str): the words the players used
+        score(int): the score of the player
+    """
     def __init__(self, name, ingame = True):
         self.name = name
         self.ingame = ingame
         self.words = set()
+        self.score = 0
     
     def __repr__(self):
+        """
+        Constrcuts the informal repsentation of the phonenumber
+        
+        Returns:
+            The desired informal repsentation fo the string
+        """
         return f"{self.name}"
-
-class NPC:
+################################################################################
+class NPC:#Under Maintanence-
     """
     
     Attributes:
@@ -265,8 +462,9 @@ class NPC:
                             continue
                 #prevents the infinite loop            
                     newcount += 1
+################################################################################
                     
-class Leaderboard:
+class Leaderboard:#Under Maintanence
     ''
     def __init__(self, name, score, category, filepath = 'leaderboard.csv'):
         self.name = name
@@ -339,7 +537,6 @@ class TrainingMemory:
         l_3_5 = []
         l_6_8 = []
         l_9_15 = []
-        
         if re.search("^w.", mode):
             if mode[1] == 'h':
                 with open("9-15.txt", "r") as f_9_15:
@@ -356,7 +553,6 @@ class TrainingMemory:
                     for words in f_3_5:
                         l_3_5.extend(words.split(", "))
                         return l_3_5
-        
         elif mode == 'insane words':
             with open("9-15.txt", "r") as f_9_15:
                 for words in f_9_15:
@@ -372,7 +568,6 @@ class TrainingMemory:
             combined.extend(l_6_8)
             combined.extend(l_3_5)
             return combined
-        
         else:
             return None
 
@@ -430,11 +625,13 @@ class TrainingMemory:
                 
                 if mode != "insane numbers":
                     if answer == printed_number:
-                        print(f"Good job! You got it right!\n")
+                        print(f"Good job! You got it right!")
+                        print(f"\n")
                         count += 1
                         keep = input("Would you like to keep going? (y/n)")
                     else:
-                        print(f"Nice try! The answer is {printed_number}\n")
+                        print(f"Nice try! The answer is {printed_number}")
+                        print(f"\n")
                         wrong += 1
                         keep = input("Would you like to keep going? (y/n)")
                 else:
@@ -459,9 +656,9 @@ class TrainingMemory:
                     time.sleep(2)
                 else:
                     time.sleep(random.randint(1,3))
-                print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
+                print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
                 ans = str(input("What word did you see?"))
-                if ans.lower() == word.lower():
+                if ans == word:
                     if mode != 'insane words':
                         print(f"Good job! You got it right!")
                         keep = input("Would you like to keep going? (y/n)")
@@ -474,7 +671,7 @@ class TrainingMemory:
                         print(f"Aw, nice try! You can still do this! Keep practicing! The correct answer was {word}.")
                         keep = input("Would you like to keep going? (y/n)")
                     else:
-                        print(f"HAHA, not surprised. The correct answer is {word}.")
+                        print(f"HAHA, not surprised. ")
                         keep = input("PLEASE QUIT, the sight of failure makes me want to throw up. Are you going to continue (y/n)?")
                     wrong += 1
 
@@ -551,7 +748,7 @@ def main():
         elif answer.lower() == 'No'.lower():
             print("Okay! We tried :( Just know I could've beaten you with half my power!)")
         else:
-            print("""So you don't know what to say? Well I will say it for you. Thank you come again!
+            print("""So you don't know wha to say? Well I will say it for you. Thank You come again!
                 Don't forget to leave a 5 star rating on Yelp""")
 
 if __name__ == '__main__':
