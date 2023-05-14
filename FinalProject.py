@@ -650,6 +650,10 @@ class Concentration:
         return valid_words
 
 def main(filepath):
+    """
+    What runs the program and provides the functionality for the program to run
+    Author(s): Jose, Adithya, Mo, John, and Melissa
+    """
     print("Welcome to our project 'Concentration 64.py'. We offer two modes: Memory Training and the Game. Which would you like to do? (1/2)")
     print("Option 1: Training\nOption 2: Concentration 64")
     
