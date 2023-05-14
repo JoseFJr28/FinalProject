@@ -1,6 +1,8 @@
 import random
 import time
 from betatestinglist import Categories
+import re
+
 
 class Concentration:
     """
@@ -122,7 +124,7 @@ class Concentration:
                 length2 += len(Categories.get(category))
         
         #Limit for how long a person has to answer        
-        limit = 5
+        limit = 0.05
         t1 = time.time()
         
         #As long as their are still enough words in the list
@@ -142,7 +144,7 @@ class Concentration:
                 
                 #If the word was not valid or the player does not provide a word
                 #in enoguh time
-                if crash or time.time() - t1 < limit:
+                if crash and time.time() - t1 < limit:
                     
                 #takes the given word and puts it into a set
                     given_word = set()
@@ -195,7 +197,6 @@ class Concentration:
                     infinite = 0
                 else:
                     continue
-        
         
     def round_over(self, player, player_list):
         """
@@ -302,7 +303,6 @@ class Concentration:
         x = game_words
         y = player_words
         a = x.intersection(y)
-        print(a)
         size = len(a)
         return True if size == 1 else False
     
@@ -711,10 +711,8 @@ def main():
         answer = input("Welcome To Concentration 64!!!! Ready to begin your journey of fun (Yes/No)? ")
         if answer.lower() == 'Yes'.lower():
             print("Great! Lets begin!")
-            print("""NOTE: If there is only 1 player in the game you will automatically
-            have a computer player to go against. If you want to include a computer player just type npc""")
-            player_count = int(input("How many players will be there? (1-4) "))
-            if player_count == 1:
+            player_count = int(input("How many players will be there? (2-4) "))
+            if player_count == 1:#Under maintanenece becuase NPC is also under maintanence
                 player_name = input("What is your name? ")
                 player1 = Player(player_name)
                 difficulty = input("what difficulty would you prefer to play? (Easy/Medium/Hard/Impossible) ")
@@ -737,7 +735,7 @@ def main():
                     else:
                         new_game.add_players(Player(player_name))
                     start += 1
-                print("Let the games begin")
+                print("Let the games begin\nDisclaimer: Spelling does matter in this program :)")
                 new_game.start_game()
             elif player_count > 4:
                 print("Sorry! That is too many players. The game will crash now")

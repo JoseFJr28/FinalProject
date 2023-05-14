@@ -24,7 +24,7 @@ with open("leaderboard.csv", mode='r') as scores_file:
         scores.append(row[1])
         categories.append(row[2])
                 
-ax = plt.subplots()
+fig, ax = plt.subplots()
 ax.bar(names, scores)
 ax.set_xlabel('Names')
 ax.set_ylabel('Scores')

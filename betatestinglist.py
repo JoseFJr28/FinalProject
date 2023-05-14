@@ -26,7 +26,7 @@ Categories = {
         24: "Wolf",
         25: "Fox",
         26: "Rabbit",
-        27: "Ostirich",
+        27: "Ostrich",
         28: "Camel",
         29: "Owl",
         30: "Elephant",
@@ -114,7 +114,16 @@ Categories = {
         112: "Woodpecker",
         113: "Yak",
         114: "Zebra",
-        115: "Wombat"
+        115: "Wombat",
+        116: "Parrot",
+        117: "Gazelle",
+        118: "Moose",
+        119: "Buck",
+        120: "Mongoose",
+        121: "Capybara",
+        122: "Crocodile",
+        123: "Alligator"
+        
     },
     "Card Games": {
         1: "Yu-Gi-Oh",
