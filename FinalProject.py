@@ -607,7 +607,9 @@ class Concentration:
      
     def convert_dict(self, dict):
         """
-       
+        This method takes the words that are guessed by the player and checks 
+        whether they are already in the dictionary or not. It returns a list of 
+        valid words that can be used
         
         Author(s): Mo
         Technique: comprehensions, list comprehensions
@@ -663,13 +665,10 @@ def main(filepath):
 
 def argesparse(arglst): 
     """
-    Command-line argmunets
+    Parse and validate command-line arguments.
     
     Args:
-        cmdarg(str): command line arguments
-        
-    Returns:
-        returns the command line arguments
+        arglist (list of str): list of command-line arguments.
     
     Author(s): Mo 
     Technique: The ArgumentParser class from the arparse module
