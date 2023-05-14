@@ -10,10 +10,19 @@ import re
 
 class Player:
     """
-    
+    A class that is used to instantiate each player object. The object is creaated with a 
+    name, an empty set to store the used words, and a score that is used for the leaderboard and visualization.
     
     Author(s): John
     Technique: Optional parameter(s)
+    
+    
+    Args:
+        name (str): The name of the player
+        words (set): A set of the words that the player has used
+        score (int): The score of the player default to 0
+        
+
     """
     def __init__(self, name, score = 0):
         self.name = name
@@ -22,8 +31,15 @@ class Player:
     
     def __repr__(self):
         """
+        An informal string representation of the player object's name that is 
+        returned so that the player's name can be used throughout the program for scoring
+        and game status.
+        
         Author(s): John
-        Requirement: Magic method other than __init__
+        Technique: Magic methods
+        
+        Returns:
+                player's name as a string representation
         """
         return f"{self.name}"
 
@@ -310,9 +326,14 @@ class Concentration:
         
     def __repr__(self):
         """
-        
+        Provides a readable representation of the player object(s) when the 
+        game runs. Returns the names of the players in a list.
         
         Author: John
+        
+        
+        Returns:
+            player_list(str): A string representation of the player list
         """
         return f"{self.player_list}"
     
@@ -331,8 +352,18 @@ class Concentration:
     
     def sequence(self, placement):
         """
+        Establishes the order of each player's turn when the game is running
         
+        
+        Args:
+               placement(int): a numerical value that tracks the players placement 
+               in the game
+        
+        Returns:
+                player placement as a string
+                
         Author(s): John
+        
         """
         if placement == 1:
             return f"first"
@@ -621,6 +652,10 @@ class Concentration:
         return valid_words
 
 def main(filepath):
+    """
+    What runs the program and provides the functionality for the program to run
+    Author(s): Jose, Adithya, Mo, John, and Melissa
+    """
     print("Welcome to our project 'Concentration 64.py'. We offer two modes: Memory Training and the Game. Which would you like to do? (1/2)")
     print("Option 1: Training\nOption 2: Concentration 64")
     
