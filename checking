@@ -1,5 +1,0 @@
-def check_words(self, game_words, player_words):
-        x = set(game_words.managewords)
-        y = set(player_words.words)
-        z = x.intersection(y)
-        print(z)
