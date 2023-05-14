@@ -125,6 +125,8 @@ class TrainingMemory:
 
 
         if mode[0] == 'n' or mode == 'insane numbers':
+            # Thought randomint() only applied to single-digit 0-9 so used this technique to get multiple digits, 
+            # but decided to keep this as it was my solution before I realized randomint() was a solution
             n5 = ([1, 1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1])
             n9 = ([1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1]) 
             n11 =([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
