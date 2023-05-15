@@ -82,3 +82,10 @@ unable to implement it. However we do have it in the code to show that we tried.
 |Concentration check_words          |    Melissa   |    Set Operations     |
 |Concentration Is_there_a_winner    |    Melissa   | Conditional Expression|
 
+### Reference List for the Terms
+
+Frimpong, Francis, et al. “List of Fruits: 100+ Fruit Names in English with Pictures • 7ESL.” 7ESL, 7 Feb. 2023, 7esl.com/fruits-vocabulary-english/
+
+Learn to Play, bicyclecards.com/how-to-play. Accessed 14 May 2023. 
+
+Proballers. “NBA Players List (2010-2011).” Proballers, www.proballers.com/basketball/league/3/nba/players/2010. Accessed 14 May 2023.
