@@ -63,6 +63,13 @@ which is Option 1: Memory Training or Option 2: Concetration 64.
         - If you provide something that is not a Y or N prompts you with a set
          message to make sure to leave a 5 star rating on Yelp.
 
+## Interpretation
+The output is pretty straightforward. The user is given options, and the user has to input what's given. 
+There's not much input validation, as mentioned above, the TrainingClass incorporates a different mode 
+if input's messed up. The program is used as a game and can be seen as something that helps your memory,
+so if a user wants to improve in that facet, they can play this. The end output for both Training
+and the game indicate how much you remember/memorized, so people can use it to measure their progress over time.
+
 ## The troubleshooting errors that still need fixing
 We tried implementing the leaderboard as best as we could but everytime we were 
 unable to implement it. However we do have it in the code to show that we tried.
