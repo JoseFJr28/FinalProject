@@ -219,7 +219,7 @@ class TrainingMemory:
                         print(f"Aw, nice try! You can still do this! Keep practicing! The correct answer was {word}.")
                         keep = input("Would you like to keep going? (y/n)")
                     else:
-                        print(f"HAHA, not surprised. ")
+                        print(f"HAHA, not surprised. The correct answer was {word}.")
                         keep = input("PLEASE QUIT, the sight of failure makes me want to throw up. Are you going to continue (y/n)? ")
                     wrong += 1
 
