@@ -582,8 +582,14 @@ class Concentration:
 
     def round_over(self, player, player_list):
         """
+         Removes player that broke the rules
+        Args:
+        player(Instance of Player): the Player
+        player_list(list of Players): The current player list
         
-        Author(s): Mo
+        Returns:
+            Updated players in current game
+        Author(s): Jose
         """
         score = len(player.words)
         update_players = []
@@ -608,8 +614,12 @@ class Concentration:
         
     def game_over(self, player_list):
         """
-        
-        Author(s): 
+        Announces the winner
+        Args:
+            player_list(list of Player(s)): The last palyer
+        Returns:
+            The winner name and their score
+        Author(s): Jose
         """
         score = len(player_list[0].words)
         player_list[0].score += score
@@ -617,14 +627,18 @@ class Concentration:
     
     def add_players(self, player_obj):
         """
-       
         Author(s): 
         """
         self.player_list.append(player_obj)
   
     def add_to_game(self, player_obj):
         """
-        Author(s):
+        To manage all the players in the game for the leaderboard to display
+        Args:
+            player_obj(instance of Player): The palyer
+        Side Effects:
+            updates the game_list
+        Author(s): Jose
         """
         self.game_list.append(player_obj)     
      
