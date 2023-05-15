@@ -670,7 +670,7 @@ def main(filepath):
         new_game = Concentration()
         answer = input("Welcome To Concentration 64!!!! Ready to begin your journey of fun (Y/N)? ")
         if answer.lower() == 'Y'.lower():
-            print("Great! Lets begin!")
+            print("Great! Let's begin!")
             player_count = int(input("How many players will be there? (2-4) "))
     
             if player_count > 1 and player_count <= 4:
@@ -697,7 +697,7 @@ def main(filepath):
         elif answer.lower() == 'N'.lower():
             print("Okay! We tried :( Just know I could've beaten you with half my power!)")
         else:
-            print("""So you don't know wha to say? Well I will say it for you. Thank You come again!
+            print("""So you don't know what to say? Well I will say it for you. Thank you, please come again!
                 Don't forget to leave a 5 star rating on Yelp""")
 
 def argesparse(arglst): 

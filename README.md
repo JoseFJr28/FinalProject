@@ -33,10 +33,15 @@ which is Option 1: Memory Training or Option 2: Concetration 64.
             - Instead of input validation if user messes up, a hidden mode activates with the keyword 'insane.' 
             This means the responses to the user input will be mean to the user (as a joke) because the user messed up.
             Otherwise, if the user answers perfectly fine and plays a standard mode, the input will be encouraging.
-        - 
-    
-    -Option 2: Concentration 64 chosen:
-     _ It will prompt 
+        - The user will be provided a letter or number based off the settings they selected. When time runs out (time.sleep()), 
+        a bunch of new empty lines will appear, basically clearing the user's screen. The user will be asked what word or number
+        they saw, and if they got the word correct, the correct tracker will increase otherwise the wrong tracker will increase.
+        - The user will be asked if they want to continue, and will answer with the options provided (y/n).
+        - When the user decides to answer with n, they'll be provided a summary of their statistics, which includes the mode played, questions answered, questions correct, percentage correct, and questions wrong.
+            - If the user chose insane mode, and got 100%, the 'mean' input will actually be a little wholesome. However,
+            the user has to answer more than 5 answers correctly, otherwise the input will be mean and no stats will be provided
+    - Option 2: Concentration 64 chosen:
+        - It will prompt 
     
 
 
