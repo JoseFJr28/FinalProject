@@ -452,84 +452,84 @@ class Concentration:
     
         
         #As long as their are still enough words in the list
-        while count < length2 and infinite < len(player_list):
-            while time.time() - t1 < limit:
-                               
-                print("You have 5 seconds to provie an answer")
-                word = input(f"{player_list[infinite]} type your word: ")
+        while count < length2 and infinite < len(player_list) and time.time() - t1 < limit:
+            
+            print("You have 5 seconds to provie an answer")
+            word = input(f"{player_list[infinite]} type your word: ")
+            
+            
+            checklist = words
+            
+            #We put all the values into a list
+            valid_words = self.convert_dict(checklist)
+            
+            #Check if the word is in the list, so a valid word
+            crash = self.check_vw(word.lower(), valid_words)
+            
+            #If the word was not valid
+            if crash:
                 
-                checklist = words
+            #takes the given word and puts it into a set
+                given_word = set()
+                given_word.add(word)
                 
-                #We put all the values into a list
-                valid_words = self.convert_dict(checklist)
+            #checks whether the word provided is a repeat before adding to 
+            #set of the managewords
+                question = self.check_words(round.managewords, given_word)
                 
-                #Check if the word is in the list, so a valid word
-                crash = self.check_vw(word.lower(), valid_words)
                 
-                #If the word was not valid
-                if crash:
-                    
-                #takes the given word and puts it into a set
-                    given_word = set()
-                    given_word.add(word)
-                    
-                #checks whether the word provided is a repeat before adding to 
-                #set of the managewords
-                    question = self.check_words(round.managewords, given_word)
-                    
-                    
-                    #now adds to managewords for next player
-                    round.managewords.add(word)
-                
-                #the results from question either True or False  
-                    if question:
-                        #Tells the player the word is already used
-                        print(f"{player_list[infinite]} you provided a used word")
-                        #Stops the round and removes the player
-                        players = self.round_over(player_list[infinite], player_list)
-                        #Checks if only one player left
-                        if self.is_there_a_winner(players):
-                            #The game is officially over announcing the winner and score
-                            self.game_over(players)
-                            play_again = input("Would you, the player(s) like to play again? (Y/N) ")
-                            if play_again.lower() == 'Y'.lower():
-                                main(filepath)
-                            else:
-                                print("Well hopefully you come back!"
-                                "\nDon't forget to leave a 5 star review on Yelp!")
-                                break
-                        else: 
-                            #if player count is 2 or more we restart the round with new or same category
-                            self.round_start(player_list, filepath)
-                    else:
-                        #Not repaeated word and valid then add to players wors
-                        player_list[infinite].words.add(word)
-                        #Allows to go to the next player         
-                        infinite += 1
-                        #Keeps going until there are no more words to count
-                        count += 1
-                        #makes it go through each player more than once until the player
-                        #breaks a rule
-                        if infinite == len(player_list):
-                            infinite = 0
-                        else:
-                            continue
-                    
-                else:
-                    #the word was invalid
-                    print(f"{player_list[infinite]} you provided an invalid word.")
+                #now adds to managewords for next player
+                round.managewords.add(word)
+            
+            #the results from question either True or False  
+                if question:
+                    #Tells the player the word is already used
+                    print(f"{player_list[infinite]} you provided a used word")
+                    #Stops the round and removes the player
                     players = self.round_over(player_list[infinite], player_list)
+                    #Checks if only one player left
                     if self.is_there_a_winner(players):
+                        #The game is officially over announcing the winner and score
                         self.game_over(players)
                         play_again = input("Would you, the player(s) like to play again? (Y/N) ")
                         if play_again.lower() == 'Y'.lower():
                             main(filepath)
-                        else:
-                            print("Well hopefully you come back!"
-                            "\nDon't forget to leave a 5 star review on Yelp!")
-                            break
+                    elif play_again.lower() == 'N'.lower() :
+                        print("Well hopefully you come back!"
+                        "\nDon't forget to leave a 5 star review on Yelp!")
+                            
                     else: 
+                        #if player count is 2 or more we restart the round with new or same category
                         self.round_start(player_list, filepath)
+                else:
+                    #Not repaeated word and valid then add to players wors
+                    player_list[infinite].words.add(word)
+                    #Allows to go to the next player         
+                    infinite += 1
+                    #Keeps going until there are no more words to count
+                    count += 1
+                    #makes it go through each player more than once until the player
+                    #breaks a rule
+                    if infinite == len(player_list):
+                        infinite = 0
+                    else:
+                        continue
+                
+            elif not crash:
+                #the word was invalid
+                print(f"{player_list[infinite]} you provided an invalid word.")
+                players = self.round_over(player_list[infinite], player_list)
+                if self.is_there_a_winner(players):
+                    self.game_over(players)
+                    play_again = input("Would you, the player(s) like to play again? (Y/N) ")
+                    if play_again.lower() == 'Y'.lower():
+                        main(filepath)
+                    elif play_again.lower() == 'N'.lower() :
+                        print("Well hopefully you come back!"
+                        "\nDon't forget to leave a 5 star review on Yelp!")
+                        
+                else: 
+                    self.round_start(player_list, filepath)
                         
         if count == length2:
             print(f"We ran out of words....so....game over you guys are too smart")
@@ -643,6 +643,8 @@ class Concentration:
         This method takes the words that are guessed by the player and checks 
         whether they are already in the dictionary or not. It returns a list of 
         valid words that can be used
+        Args:
+            dict(the categories): the keys of the dictionaries 
         
         Author(s): Mo
         Technique: comprehensions, list comprehensions
@@ -668,7 +670,8 @@ def main(filepath):
         TrainingMemory.training_exercise(modes)
     elif which_mode == '2':
         new_game = Concentration()
-        answer = input("Welcome To Concentration 64!!!! Ready to begin your journey of fun (Y/N)? ")
+        answer = input("Welcome To Concentration 64!!!! Ready to begin your"
+                       " journey of fun (Y/N)? ")
         if answer.lower() == 'Y'.lower():
             print("Great! Let's begin!")
             player_count = int(input("How many players will be there? (2-4) "))
@@ -682,10 +685,16 @@ def main(filepath):
                     if score_update.lower() == 'Y'.lower():
                         new_score = input("How many points would you like? (1-10) ")
                         new_score = int(new_score)
-                        print(type(new_score))
-                        new_game.add_players(Player(player_name, new_score))
-                        new_game.add_to_game(Player(player_name, new_score))
-                        start += 1
+                        if new_score >= 1 and new_score <= 10:
+                            new_game.add_players(Player(player_name, new_score))
+                            new_game.add_to_game(Player(player_name, new_score))
+                            start += 1
+                        else:
+                            print("Sorry thats not within range, no points will"
+                                  " be added")
+                            new_game.add_players(Player(player_name))
+                            new_game.add_to_game(Player(player_name))               
+                            start += 1
                     else:          
                         new_game.add_players(Player(player_name))
                         new_game.add_to_game(Player(player_name))               
