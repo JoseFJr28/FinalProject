@@ -27,7 +27,6 @@ that in this program spelling is highly important and if its plural or not.
 Apologies in advance
 
 # How to run the program
-<<<<<<< HEAD
 1. In the command line you will type **python FinalProject.py CategoryList.json**
 
 # The ideal run for the program
@@ -37,11 +36,11 @@ which is Option 1: Memory Training or Option 2: Concetration 64. You must choose
 either 1 or 2 
     - Option 1: Memory Traingin Chosen
     - Option 2: Concentration 64 chosen:
-     - You have a prompt greeting for the game and ask for a simple yes, Y, or 
+      - You have a prompt greeting for the game and ask for a simple yes, Y, or 
        no, N. If you choose Y
-       - It will prompt you to choose how many players you will have. Minimum is 2
+        - It will prompt you to choose how many players you will have. Minimum is 2
          and maximum is 4. You need two physical players to play
-       - Then we ask for the players name
+        - Then we ask for the players name
         - Then we ask if you would like a point advantage. This is for kids to be 
           involved in the game and if someone is has a very high ego and can beat 
           you with a point advantage.
@@ -59,22 +58,6 @@ either 1 or 2
 We tried implementing the leaderboard as best as we could but everytime we were 
 unable to implement it. However we do have it in the code to show that we tried.
 
-=======
-1. In the command line you will type **python FinalProject.py CategoryList.json** (it's also important to make sure you're
-in the FinalProject directory or else you may run into a file error)
-2. Then you are prompted to the intro of the program that provides two options 
-which is Option 1: Memory Training or Option 2: Concetration 64.
-    - Option 1: Memory Training Chosen:
-        - User will be prompted to select between the number or word mode, which they will do by putting the first letter.
-        - Afterwards, they choose the time and length for their selection (options will be shown)
-            - Instead of input validation if user messes up, a hidden mode activates with the keyword 'insane.' 
-            This means the responses to the user input will be mean to the user (as a joke) because the user messed up.
-            Otherwise, if the user answers perfectly fine and plays a standard mode, the input will be encouraging.
-        - 
-    
-    -Option 2: Concentration 64 chosen:
-     _ It will prompt 
->>>>>>> refs/remotes/origin/main
     
 
 
