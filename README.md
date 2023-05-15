@@ -68,18 +68,6 @@ We tried implementing the leaderboard as best as we could but everytime we were
 unable to implement it. However we do have it in the code to show that we tried.
 
 ## Attribution Table
-     |          Method/Function          |Primary Author|Techniques Demonstrated|
-     | --------------------------------- | ------------ | --------------------- |
-     |Player/Concentration _repr_()      |     John     |     Magic Methods     |
-     |Player __init__()                  |     John     |   Optional Parameters |
-     |Concentration Round_start()        |     Jose     |      Composition      |
-     |Concentration Round_start()        |     Jose     |       json.load       |
-     |TrainingMemory file()              |   Adithya    |      with open()      |
-     |TrainingMemory training_exercise() |   Adithya    |f-strings w expressions|
-     |argeparse                          |      Mo      |     ArgumentParse     |
-     |Concentration convert_dict()       |      Mo      |  List comprehension   |
-     |Concentration check_words          |    Melissa   |    Set Operations     |
-     |Concentration Is_there_a_winner    |    Melissa   | Conditional Expression|
 
 |          Method/Function          |Primary Author|Techniques Demonstrated|
 | --------------------------------- | ------------ | --------------------- |
