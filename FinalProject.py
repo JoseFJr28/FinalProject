@@ -338,7 +338,9 @@ class Concentration:
     
     def clap_mode(self):
         """
-        
+        This method allows is to add the claps ass if we were
+        playing the orignal game and sleeps for the amount of time that 
+        it would take to clap
         
         Author: Melissa
         """
@@ -569,7 +571,9 @@ class Concentration:
     
     def is_there_a_winner(self, player_list):
         """
-            
+         This method gives the winner 
+         Args(str): Player_list: list of players
+         returns: the winner if condtion is met 
         Author(s): Melissa
         Technique: conditional expression
         """
@@ -614,7 +618,13 @@ class Concentration:
 
     def check_words(self, game_words, player_words):
         """
-                   
+        This method checks the words used overall in the game to make sure
+        its not repeated
+        
+        Args(str):game_words is the words that have been used ing the game
+             player_words(list of Players and their words): 
+             this current players words
+        returns: true if player words match game words or false id it doesn't      
         Author(s): Melissa
         Technique: Set operations on sets
         """
