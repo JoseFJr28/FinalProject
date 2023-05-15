@@ -7,8 +7,13 @@ and sets out the rules of the game which is for each player to be able to name
 items in the chosen category with no repetition or hesitation. If the players 
 are too slow in naming an item in the category that hasn’t been saying before, 
 they lose! Once someone has lost, you simply choose a new person to recite the 
-rhyme and choose a brand-new category. We also feature a Memory Training mode 
-that provides a way to see how good you really are at memorizing words.
+rhyme and choose a brand-new category. 
+
+We also feature a Memory Training mode that provides a way to see how skilled
+you are at memorizing words or numbers. The user is able to choose whether 
+they memorize numbers or words, then they get to choose how much time
+they get to memorize their selection and also the length. For example,
+they can choose an option that'd give them 3 to 5, 6 to 8, or 9 to 15 letter words.
 
 
 # File Justification
@@ -22,6 +27,7 @@ that in this program spelling is highly important and if its plural or not.
 Apologies in advance
 
 # How to run the program
+<<<<<<< HEAD
 1. In the command line you will type **python FinalProject.py CategoryList.json**
 
 # The ideal run for the program
@@ -53,5 +59,22 @@ either 1 or 2
 We tried implementing the leaderboard as best as we could but everytime we were 
 unable to implement it. However we do have it in the code to show that we tried.
 
+=======
+1. In the command line you will type **python FinalProject.py CategoryList.json** (it's also important to make sure you're
+in the FinalProject directory or else you may run into a file error)
+2. Then you are prompted to the intro of the program that provides two options 
+which is Option 1: Memory Training or Option 2: Concetration 64.
+    - Option 1: Memory Training Chosen:
+        - User will be prompted to select between the number or word mode, which they will do by putting the first letter.
+        - Afterwards, they choose the time and length for their selection (options will be shown)
+            - Instead of input validation if user messes up, a hidden mode activates with the keyword 'insane.' 
+            This means the responses to the user input will be mean to the user (as a joke) because the user messed up.
+            Otherwise, if the user answers perfectly fine and plays a standard mode, the input will be encouraging.
+        - 
     
+    -Option 2: Concentration 64 chosen:
+     _ It will prompt 
+>>>>>>> refs/remotes/origin/main
+    
+
 
