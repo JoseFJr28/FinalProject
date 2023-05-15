@@ -631,8 +631,12 @@ class Concentration:
 =======
        This method adds the players to the player list 
        
+<<<<<<< HEAD
 >>>>>>> refs/remotes/origin/main
         Author(s): 
+=======
+        Author(s): Melissa
+>>>>>>> c62767b06eed66c05d6777efa4e688e88155b775
         """
         self.player_list.append(player_obj)
   
@@ -647,8 +651,12 @@ class Concentration:
         Author(s): Jose
 =======
         This method adds the player to the game 
+<<<<<<< HEAD
         Author(s):
 >>>>>>> refs/remotes/origin/main
+=======
+        Author(s):Melissa
+>>>>>>> c62767b06eed66c05d6777efa4e688e88155b775
         """
         self.game_list.append(player_obj)     
      
