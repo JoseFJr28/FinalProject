@@ -69,7 +69,7 @@ unable to implement it. However we do have it in the code to show that we tried.
 
 ## Attribution Table
      |          Method/Function          |Primary Author|Techniques Demonstrated|
-     |:---------------------------------:|:------------:|:---------------------:|
+     |-----------------------------------|--------------|-----------------------|
      |Player/Concentration _repr_()      |     John     |     Magic Methods     |
      |Player __init__()                  |     John     |   Optional Parameters |
      |Concentration Round_start()        |     Jose     |      Composition      |
