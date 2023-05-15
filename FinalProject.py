@@ -627,36 +627,18 @@ class Concentration:
     
     def add_players(self, player_obj):
         """
-<<<<<<< HEAD
-=======
        This method adds the players to the player list 
-       
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/main
-        Author(s): 
-=======
+
         Author(s): Melissa
->>>>>>> c62767b06eed66c05d6777efa4e688e88155b775
+
         """
         self.player_list.append(player_obj)
   
     def add_to_game(self, player_obj):
         """
-<<<<<<< HEAD
-        To manage all the players in the game for the leaderboard to display
-        Args:
-            player_obj(instance of Player): The palyer
-        Side Effects:
-            updates the game_list
-        Author(s): Jose
-=======
         This method adds the player to the game 
-<<<<<<< HEAD
-        Author(s):
->>>>>>> refs/remotes/origin/main
-=======
+
         Author(s):Melissa
->>>>>>> c62767b06eed66c05d6777efa4e688e88155b775
         """
         self.game_list.append(player_obj)     
      
