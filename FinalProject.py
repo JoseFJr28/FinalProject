@@ -617,7 +617,7 @@ class Concentration:
     
     def add_players(self, player_obj):
         """
-       This method adds the playersto the game 
+       This method adds the players to the player list 
        
         Author(s): 
         """
@@ -625,6 +625,7 @@ class Concentration:
   
     def add_to_game(self, player_obj):
         """
+        This method adds the player to the game 
         Author(s):
         """
         self.game_list.append(player_obj)     
