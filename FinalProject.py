@@ -253,9 +253,6 @@ class Leaderboard:#Under Maintanence
     """
     Will display the leaderboard with the players score
     
-    Attributes:
-        
-    
     Author: Mo
     """
     ''
@@ -378,7 +375,8 @@ class Concentration:
     
     def start_game(self, player_list, filepath):
         """
-        
+        This method starts the game and prints out each message to display the
+        beginning of the round and accounts for the game starting.
         
         Author(s): Mo
         
