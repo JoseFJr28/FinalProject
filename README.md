@@ -68,17 +68,24 @@ We tried implementing the leaderboard as best as we could but everytime we were
 unable to implement it. However we do have it in the code to show that we tried.
 
 ## Attribution Table
-     |          Method/Function          |Primary Author|Techniques Demonstrated|
-     |-----------------------------------|--------------|-----------------------|
-     |Player/Concentration _repr_()      |     John     |     Magic Methods     |
-     |Player __init__()                  |     John     |   Optional Parameters |
-     |Concentration Round_start()        |     Jose     |      Composition      |
-     |Concentration Round_start()        |     Jose     |       json.load       |
-     |TrainingMemory file()              |   Adithya    |      with open()      |
-     |TrainingMemory training_exercise() |   Adithya    |f-strings w expressions|
-     |argeparse                          |      Mo      |     ArgumentParse     |
-     |Concentration convert_dict()       |      Mo      |  List comprehension   |
-     |Concentration check_words          |    Melissa   |    Set Operations     |
-     |Concentration Is_there_a_winner    |    Melissa   | Conditional Expression|
 
+|          Method/Function          |Primary Author|Techniques Demonstrated|
+| --------------------------------- | ------------ | --------------------- |
+|Player/Concentration _repr_()      |     John     |     Magic Methods     |
+|Player __init__()                  |     John     |   Optional Parameters |
+|Concentration Round_start()        |     Jose     |      Composition      |
+|Concentration Round_start()        |     Jose     |       json.load       |
+|TrainingMemory file()              |   Adithya    |      with open()      |
+|TrainingMemory training_exercise() |   Adithya    |f-strings w expressions|
+|argeparse                          |      Mo      |     ArgumentParse     |
+|Concentration convert_dict()       |      Mo      |  List comprehension   |
+|Concentration check_words          |    Melissa   |    Set Operations     |
+|Concentration Is_there_a_winner    |    Melissa   | Conditional Expression|
 
+### Reference List for the Terms
+
+Frimpong, Francis, et al. “List of Fruits: 100+ Fruit Names in English with Pictures • 7ESL.” 7ESL, 7 Feb. 2023, 7esl.com/fruits-vocabulary-english/
+
+Learn to Play, bicyclecards.com/how-to-play. Accessed 14 May 2023. 
+
+Proballers. “NBA Players List (2010-2011).” Proballers, www.proballers.com/basketball/league/3/nba/players/2010. Accessed 14 May 2023.
