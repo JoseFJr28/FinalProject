@@ -428,7 +428,7 @@ class Concentration:
         with open(filepath, "r", encoding="utf-8") as file:
             options = json.load(file)
         
-        category = input(("Category is (NBA [from 2010-11]/Occupations/Animals/Card Games/Fruits): "))
+        category = input(("Category is (NBA [Last name A-H, from 2010-11]/Occupations/Animals/Card Games/Fruits): "))
         
         #Handles the case sensitivty
         valid_category = self.category_adjuster(category, options)
