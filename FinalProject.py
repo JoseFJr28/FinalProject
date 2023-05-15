@@ -45,13 +45,26 @@ class Player:
 
 class TrainingMemory:
     """
+    Memory game where users have to memorize a word or number (based on what they choose) in a certain amount of time.
+    
+    Attributes:
+        l_3_5 (list of str): list of words from 3 to 5 letters (inclusive)
+        l_6_8 (list of str): list of words from 6 to 8 letters (inclusive)
+        l_9_15 (list of str): list of words from 9 to 15 letters (inclusive)
     
     Author: Adithya
     """
     def mode():
         """
+        Sets mode for what user wants based on 
         
-        Author(s): Adithya
+        Args: 
+            None
+            
+        Returns:
+            mode (str): mode for which user decides
+        
+        Author(s): Adithya, Melissa
         """
         w_t = input("Would you like to practice with words or numbers (w or n) ")
         if w_t == 'w':
@@ -73,7 +86,12 @@ class TrainingMemory:
 
     def file(mode):
         """
-        Author(s): Adithya
+        Intializes the lists (serves as similar purpose to __init__ function for this class)
+        
+        Args:
+            mode (str): Mode regarding word or number, time, and length
+        
+        Author(s): Adithya, Mo
         Requirement: with statements
         """
         l_3_5 = []
@@ -115,7 +133,15 @@ class TrainingMemory:
 
     def training_exercise(mode):
         """
-        Author(s): Adithya
+        The actual exercise that executes the training
+        
+        Argument:
+            mode (str): the mode that determines how hard the training exercise is
+            
+        Returns:
+            Summary (str): Summary of statistics
+        
+        Author(s): Adithya, John, Jose
         Technique: f-strings containing expressions
         """
         keep = input("Would you like to start? Type (y/n) ")
