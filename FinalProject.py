@@ -619,14 +619,14 @@ class Concentration:
         """
        This method adds the players to the player list 
        
-        Author(s): 
+        Author(s): Melissa
         """
         self.player_list.append(player_obj)
   
     def add_to_game(self, player_obj):
         """
         This method adds the player to the game 
-        Author(s):
+        Author(s):Melissa
         """
         self.game_list.append(player_obj)     
      
