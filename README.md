@@ -45,18 +45,8 @@ which is Option 1: Memory Training or Option 2: Concetration 64.
             - If the user chose insane mode, and got 100%, the 'mean' input will actually be a little wholesome. However,
             the user has to answer more than 5 answers correctly, otherwise the input will be mean and no stats will be provided
     - Option 2: Concentration 64 chosen:
-        - It will prompt 
-1. In the command line you will type **python FinalProject.py CategoryList.json**
-
-# The ideal run for the program
-1. After the commoand line is provided to run the program, which is given above,
-you will be prompted to the intro of the program that provides two options 
-which is Option 1: Memory Training or Option 2: Concetration 64. You must choose 
-either 1 or 2 
-    - Option 1: Memory Traingin Chosen
-    - Option 2: Concentration 64 chosen:
-      - You have a prompt greeting for the game and ask for a simple yes, Y, or 
-       no, N. If you choose Y
+        - You have a prompt greeting for the game and ask for a simple yes, Y, or 
+          no, N. If you choose Y
         - It will prompt you to choose how many players you will have. Minimum is 2
          and maximum is 4. You need two physical players to play
         - Then we ask for the players name
@@ -69,9 +59,9 @@ either 1 or 2
           the available options we provide.
         - You keep providing words until the last person is in the game as the 
           winner
-     - If you say N then we just have you we prompt a good by message.
-     - If you provide something that is not a Y or N prompts you with a set
-       message to make sure to leave a 5 star rating on Yelp.
+        - If you say N then we just have you we prompt a good by message.
+        - If you provide something that is not a Y or N prompts you with a set
+         message to make sure to leave a 5 star rating on Yelp.
 
 ## The troubleshooting errors that still need fixing
 We tried implementing the leaderboard as best as we could but everytime we were 
